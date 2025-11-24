@@ -2,6 +2,7 @@ package com.back.back_reporte_deploy_app.entity;
 
 import java.time.LocalDate;
 import java.time.LocalTime;
+import java.util.List;
 
 import com.back.back_reporte_deploy_app.enums.TipoDeploy;
 
@@ -12,6 +13,7 @@ import jakarta.persistence.Enumerated;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
+import jakarta.persistence.OneToMany;
 import lombok.Data;
 
 @Data
@@ -39,4 +41,6 @@ public class Deploy {
     @JoinColumn(name = "id_proyecto")
     private Proyecto proyecto;
     
+    @OneToMany(mappedBy = "deploy")
+    private List<Bug> bugs;
 }
