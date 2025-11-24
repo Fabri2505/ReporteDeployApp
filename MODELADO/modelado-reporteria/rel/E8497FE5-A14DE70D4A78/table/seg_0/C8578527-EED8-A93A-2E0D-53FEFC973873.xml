@@ -1,0 +1,77 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="C8578527-EED8-A93A-2E0D-53FEFC973873" name="area_afectada">
+<createdBy>practicante.ti2</createdBy>
+<createdTime>2025-11-24 21:20:50 UTC</createdTime>
+<generatorID>0F00E668-C044-C5F6-AD86-6367F8D15694</generatorID>
+<ownerDesignName>modelado-reporteria</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="cant_usu_afect" id="4E931258-A8A7-E85F-A920-9480DC42E2AA">
+<createdBy>practicante.ti2</createdBy>
+<createdTime>2025-11-24 21:20:50 UTC</createdTime>
+<generatorID>8B2DE99C-E9A2-A3B6-BAA3-5F58E4171757</generatorID>
+<ownerDesignName>modelado-reporteria</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="area_id_area" id="4A090D08-45ED-FC10-9BC7-F9F2AA93290C">
+<createdBy>practicante.ti2</createdBy>
+<createdTime>2025-11-24 21:20:50 UTC</createdTime>
+<generatorID>D6D511C8-B8B6-7BAA-386D-F8BFA0E9428C</generatorID>
+<ownerDesignName>modelado-reporteria</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="CFC3A031-3033-A118-1FA2-3131CC2E9025" referredColumn="D128F308-6CEF-C244-C747-4FFB452B4118"/>
+</associations>
+</Column>
+<Column name="features_id_feature" id="935A269D-EA1F-1FED-0D99-27F49273F6DF">
+<createdBy>practicante.ti2</createdBy>
+<createdTime>2025-11-24 21:20:50 UTC</createdTime>
+<generatorID>D7BB15E9-708F-D99C-F56A-D63E87CCA3B7</generatorID>
+<ownerDesignName>modelado-reporteria</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="9E6D6309-5CF9-7955-C77B-4AD3987B2984" referredColumn="2B9F1221-8F27-CF18-09C8-24EE9BC5E7DB"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="AAA405B1-519F-D769-B0B5-15E981108752" name="area_afectada_area_FK">
+<createdBy>practicante.ti2</createdBy>
+<createdTime>2025-11-24 21:20:50 UTC</createdTime>
+<generatorID>9D7899E6-AD34-3ECB-AC79-4BCA8596D3E6</generatorID>
+<ownerDesignName>modelado-reporteria</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="4A090D08-45ED-FC10-9BC7-F9F2AA93290C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="8C3940DA-7D06-B87D-4DB9-CF23ABB88A89" name="area_afectada_features_FK">
+<createdBy>practicante.ti2</createdBy>
+<createdTime>2025-11-24 21:20:50 UTC</createdTime>
+<generatorID>BDE5FA9B-1E92-C7DF-25DC-12D5A95018D9</generatorID>
+<ownerDesignName>modelado-reporteria</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="935A269D-EA1F-1FED-0D99-27F49273F6DF"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

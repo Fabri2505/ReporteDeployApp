@@ -1,0 +1,75 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="8592D600-410C-5A68-F4E2-6A477D9622E0" name="componente_desplegado">
+<createdBy>practicante.ti2</createdBy>
+<createdTime>2025-11-24 21:20:50 UTC</createdTime>
+<generatorID>36504C9A-BCAF-5954-744C-384186C8333D</generatorID>
+<ownerDesignName>modelado-reporteria</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_comp_deploy" id="64B29E68-F057-430F-8210-E0B8D2399540">
+<createdBy>practicante.ti2</createdBy>
+<createdTime>2025-11-24 21:20:50 UTC</createdTime>
+<generatorID>1F4C3F97-264E-F07E-DBEF-6833EDBC4639</generatorID>
+<ownerDesignName>modelado-reporteria</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="descrip_comp_deploy" id="AC6A156A-2A90-9BBD-3258-3618A48737DC">
+<createdBy>practicante.ti2</createdBy>
+<createdTime>2025-11-24 21:20:50 UTC</createdTime>
+<generatorID>24660398-F8DD-C56C-2232-1668FA5CCBB3</generatorID>
+<ownerDesignName>modelado-reporteria</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>300 CHAR</dataTypeSize>
+<ownDataTypeParameters>300 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="features_id_feature" id="2C546F11-25D4-10AD-9BFE-D1766C495D51">
+<createdBy>practicante.ti2</createdBy>
+<createdTime>2025-11-24 21:20:50 UTC</createdTime>
+<generatorID>03896024-C2D6-D4C7-286D-282BDD92CF74</generatorID>
+<ownerDesignName>modelado-reporteria</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="EB47A261-D677-2BBD-D91A-3902EF5551BF" referredColumn="2B9F1221-8F27-CF18-09C8-24EE9BC5E7DB"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="B53EEF57-2DF2-8BCC-F481-435B58820E23" name="componente_desplegado_PK">
+<createdBy>practicante.ti2</createdBy>
+<createdTime>2025-11-24 21:20:50 UTC</createdTime>
+<generatorID>1996F398-6E3C-3E81-BD94-461DB6497AB2</generatorID>
+<ownerDesignName>modelado-reporteria</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="64B29E68-F057-430F-8210-E0B8D2399540"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="12378D38-6F5A-7319-3942-A9F78A061D74" name="componente_desplegado_features_FK">
+<createdBy>practicante.ti2</createdBy>
+<createdTime>2025-11-24 21:20:50 UTC</createdTime>
+<generatorID>4A6ED221-6A60-BD15-54EE-A1DB717F150B</generatorID>
+<ownerDesignName>modelado-reporteria</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="2C546F11-25D4-10AD-9BFE-D1766C495D51"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

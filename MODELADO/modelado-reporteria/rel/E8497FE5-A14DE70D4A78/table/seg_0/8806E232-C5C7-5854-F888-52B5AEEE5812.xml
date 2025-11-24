@@ -1,0 +1,49 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="8806E232-C5C7-5854-F888-52B5AEEE5812" name="area">
+<createdBy>practicante.ti2</createdBy>
+<createdTime>2025-11-24 21:20:50 UTC</createdTime>
+<generatorID>A4BE67D0-282A-CC21-7BC0-73050EB3D530</generatorID>
+<ownerDesignName>modelado-reporteria</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_area" id="D128F308-6CEF-C244-C747-4FFB452B4118">
+<createdBy>practicante.ti2</createdBy>
+<createdTime>2025-11-24 21:20:50 UTC</createdTime>
+<generatorID>1E9B1F3B-89F6-AF6F-D96A-7AB2BCA429E9</generatorID>
+<ownerDesignName>modelado-reporteria</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nom_area" id="DCCBDF25-5B08-9DBE-EED5-2E6561D22D4E">
+<createdBy>practicante.ti2</createdBy>
+<createdTime>2025-11-24 21:20:50 UTC</createdTime>
+<generatorID>E55C1C64-7535-A997-07FF-667577D67E17</generatorID>
+<ownerDesignName>modelado-reporteria</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 CHAR</dataTypeSize>
+<ownDataTypeParameters>20 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="B39E407C-B78B-666B-FB02-9580EAF4AE77" name="area_PK">
+<createdBy>practicante.ti2</createdBy>
+<createdTime>2025-11-24 21:20:50 UTC</createdTime>
+<generatorID>F60A0B30-BF80-0810-F818-2976CBF1FC4F</generatorID>
+<ownerDesignName>modelado-reporteria</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="D128F308-6CEF-C244-C747-4FFB452B4118"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

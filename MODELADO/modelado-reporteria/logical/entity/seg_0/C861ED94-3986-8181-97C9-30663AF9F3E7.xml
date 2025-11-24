@@ -14,4 +14,58 @@
 <maxVolumes>9999999</maxVolumes>
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id_valid" id="EFBB4A3C-8F53-82BA-DBDB-BE0DDC86511D">
+<createdBy>practicante.ti2</createdBy>
+<createdTime>2025-11-24 17:03:16 UTC</createdTime>
+<ownerDesignName>modelado-reporteria</ownerDesignName>
+<engineerTo>
+<item key="E8497FE5-32B1-ADDE-CA07-A14DE70D4A78" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nom_valid" id="4AFA257C-9419-7109-82F8-197CA95C1636">
+<createdBy>practicante.ti2</createdBy>
+<createdTime>2025-11-24 17:03:56 UTC</createdTime>
+<ownerDesignName>modelado-reporteria</ownerDesignName>
+<engineerTo>
+<item key="E8497FE5-32B1-ADDE-CA07-A14DE70D4A78" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 CHAR</dataTypeSize>
+<ownDataTypeParameters>20 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="tipo_valid" id="CD756279-2CB7-CC19-1CE9-B068DFFD0F13">
+<createdBy>practicante.ti2</createdBy>
+<createdTime>2025-11-24 19:43:14 UTC</createdTime>
+<ownerDesignName>modelado-reporteria</ownerDesignName>
+<engineerTo>
+<item key="E8497FE5-32B1-ADDE-CA07-A14DE70D4A78" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 CHAR</dataTypeSize>
+<ownDataTypeParameters>20 CHAR,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="CE2936B0-B683-5E0F-5923-5FCEE83556BE" name="validacion PK">
+<createdBy>practicante.ti2</createdBy>
+<createdTime>2025-11-24 17:03:54 UTC</createdTime>
+<ownerDesignName>modelado-reporteria</ownerDesignName>
+<engineerTo>
+<item key="E8497FE5-32B1-ADDE-CA07-A14DE70D4A78" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>EFBB4A3C-8F53-82BA-DBDB-BE0DDC86511D</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
 </Entity>

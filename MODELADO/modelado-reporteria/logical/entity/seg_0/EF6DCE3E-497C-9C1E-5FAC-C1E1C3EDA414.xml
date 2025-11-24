@@ -14,4 +14,58 @@
 <maxVolumes>9999999</maxVolumes>
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id_despliegue" id="62901746-0217-FCE4-47CD-062E283D8124">
+<createdBy>practicante.ti2</createdBy>
+<createdTime>2025-11-24 20:37:38 UTC</createdTime>
+<ownerDesignName>modelado-reporteria</ownerDesignName>
+<engineerTo>
+<item key="E8497FE5-32B1-ADDE-CA07-A14DE70D4A78" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nom_despliegue" id="6964B452-7B7E-AD82-3B8F-48859473BE09">
+<createdBy>practicante.ti2</createdBy>
+<createdTime>2025-11-24 20:37:54 UTC</createdTime>
+<ownerDesignName>modelado-reporteria</ownerDesignName>
+<engineerTo>
+<item key="E8497FE5-32B1-ADDE-CA07-A14DE70D4A78" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 CHAR</dataTypeSize>
+<ownDataTypeParameters>20 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="tipo_despliegue" id="6EA92EE3-8777-A48B-2853-6275740293EA">
+<createdBy>practicante.ti2</createdBy>
+<createdTime>2025-11-24 20:40:56 UTC</createdTime>
+<ownerDesignName>modelado-reporteria</ownerDesignName>
+<engineerTo>
+<item key="E8497FE5-32B1-ADDE-CA07-A14DE70D4A78" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 CHAR</dataTypeSize>
+<ownDataTypeParameters>20 CHAR,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="774A024A-B2ED-BDBC-5C0A-1F727554AFD4" name="proceso_deploy PK">
+<createdBy>practicante.ti2</createdBy>
+<createdTime>2025-11-24 20:37:53 UTC</createdTime>
+<ownerDesignName>modelado-reporteria</ownerDesignName>
+<engineerTo>
+<item key="E8497FE5-32B1-ADDE-CA07-A14DE70D4A78" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>62901746-0217-FCE4-47CD-062E283D8124</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
 </Entity>

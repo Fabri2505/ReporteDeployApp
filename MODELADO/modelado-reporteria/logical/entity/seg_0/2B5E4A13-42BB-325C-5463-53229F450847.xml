@@ -14,4 +14,45 @@
 <maxVolumes>9999999</maxVolumes>
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id_plan_rollback" id="C6BB12E5-D37F-5628-AF70-3E0A31DC6E82">
+<createdBy>practicante.ti2</createdBy>
+<createdTime>2025-11-24 17:16:26 UTC</createdTime>
+<ownerDesignName>modelado-reporteria</ownerDesignName>
+<engineerTo>
+<item key="E8497FE5-32B1-ADDE-CA07-A14DE70D4A78" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nom_plan" id="E4904A85-15E9-3F82-CAD4-5912372526A7">
+<createdBy>practicante.ti2</createdBy>
+<createdTime>2025-11-24 17:16:39 UTC</createdTime>
+<ownerDesignName>modelado-reporteria</ownerDesignName>
+<engineerTo>
+<item key="E8497FE5-32B1-ADDE-CA07-A14DE70D4A78" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30 CHAR</dataTypeSize>
+<ownDataTypeParameters>30 CHAR,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="653796D6-3E94-4E32-7F78-586554EEF5F0" name="plan_rollback PK">
+<createdBy>practicante.ti2</createdBy>
+<createdTime>2025-11-24 17:16:39 UTC</createdTime>
+<ownerDesignName>modelado-reporteria</ownerDesignName>
+<engineerTo>
+<item key="E8497FE5-32B1-ADDE-CA07-A14DE70D4A78" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>C6BB12E5-D37F-5628-AF70-3E0A31DC6E82</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
 </Entity>

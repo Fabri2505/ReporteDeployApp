@@ -14,4 +14,72 @@
 <maxVolumes>9999999</maxVolumes>
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id_feature" id="3125E623-7349-D43D-4443-28F67EE0DD15">
+<createdBy>practicante.ti2</createdBy>
+<createdTime>2025-11-24 17:15:47 UTC</createdTime>
+<generatorID>8A8C0267-9E25-5B60-69BE-742B0ACD1ED2</generatorID>
+<ownerDesignName>modelado-reporteria</ownerDesignName>
+<engineerTo>
+<item key="E8497FE5-32B1-ADDE-CA07-A14DE70D4A78" value="true"/>
+</engineerTo>
+<referedAttribute>76974972-831C-4400-E047-DED573A07068</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_cambio" id="B512A6FB-1170-AA89-3546-584ABF907423">
+<createdBy>practicante.ti2</createdBy>
+<createdTime>2025-11-24 20:54:14 UTC</createdTime>
+<ownerDesignName>modelado-reporteria</ownerDesignName>
+<engineerTo>
+<item key="E8497FE5-32B1-ADDE-CA07-A14DE70D4A78" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="descrip_cambio" id="B4DADA6B-5B6B-1895-80E9-1E4078E7C1A1">
+<createdBy>practicante.ti2</createdBy>
+<createdTime>2025-11-24 20:54:21 UTC</createdTime>
+<ownerDesignName>modelado-reporteria</ownerDesignName>
+<engineerTo>
+<item key="E8497FE5-32B1-ADDE-CA07-A14DE70D4A78" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>300 CHAR</dataTypeSize>
+<ownDataTypeParameters>300 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="tipo" id="6429207F-D992-34FC-007B-24CEEA4EE1C6">
+<createdBy>practicante.ti2</createdBy>
+<createdTime>2025-11-24 20:54:40 UTC</createdTime>
+<ownerDesignName>modelado-reporteria</ownerDesignName>
+<engineerTo>
+<item key="E8497FE5-32B1-ADDE-CA07-A14DE70D4A78" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 CHAR</dataTypeSize>
+<ownDataTypeParameters>20 CHAR,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="BF510E72-31F8-FEA9-067E-B7D75356AADE" name="cambios PK">
+<createdBy>practicante.ti2</createdBy>
+<createdTime>2025-11-24 20:54:20 UTC</createdTime>
+<ownerDesignName>modelado-reporteria</ownerDesignName>
+<engineerTo>
+<item key="E8497FE5-32B1-ADDE-CA07-A14DE70D4A78" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>B512A6FB-1170-AA89-3546-584ABF907423</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
 </Entity>

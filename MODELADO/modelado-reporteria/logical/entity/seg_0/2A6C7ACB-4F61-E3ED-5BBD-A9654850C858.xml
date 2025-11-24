@@ -14,4 +14,99 @@
 <maxVolumes>9999999</maxVolumes>
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id_feature" id="76974972-831C-4400-E047-DED573A07068">
+<createdBy>practicante.ti2</createdBy>
+<createdTime>2025-11-24 17:11:15 UTC</createdTime>
+<ownerDesignName>modelado-reporteria</ownerDesignName>
+<engineerTo>
+<item key="E8497FE5-32B1-ADDE-CA07-A14DE70D4A78" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nivel_riesgo" id="7E6FE612-600D-75BC-DAC1-6562E830CA9A">
+<createdBy>practicante.ti2</createdBy>
+<createdTime>2025-11-24 17:11:27 UTC</createdTime>
+<ownerDesignName>modelado-reporteria</ownerDesignName>
+<engineerTo>
+<item key="E8497FE5-32B1-ADDE-CA07-A14DE70D4A78" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 CHAR</dataTypeSize>
+<ownDataTypeParameters>20 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="downtime" id="33FAFA1C-6119-5B3D-27E3-64EC3197FCAF">
+<createdBy>practicante.ti2</createdBy>
+<createdTime>2025-11-24 17:13:55 UTC</createdTime>
+<ownerDesignName>modelado-reporteria</ownerDesignName>
+<engineerTo>
+<item key="E8497FE5-32B1-ADDE-CA07-A14DE70D4A78" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_deploy" id="ED613DE8-D575-BA11-6897-7FE5837C2183">
+<createdBy>practicante.ti2</createdBy>
+<createdTime>2025-11-24 16:43:33 UTC</createdTime>
+<generatorID>1F81ADE5-DDF0-6AF1-DEB5-7EC769904B1B</generatorID>
+<ownerDesignName>modelado-reporteria</ownerDesignName>
+<engineerTo>
+<item key="E8497FE5-32B1-ADDE-CA07-A14DE70D4A78" value="true"/>
+</engineerTo>
+<referedAttribute>01EB6F36-3262-9FC7-26D1-3E1245F84553</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_plan_rollback" id="F1211EEF-823D-8EA0-7AFE-3F82FC1B9689">
+<createdBy>practicante.ti2</createdBy>
+<createdTime>2025-11-24 17:16:51 UTC</createdTime>
+<generatorID>BA85DD7C-2338-DFFC-A8AA-6692642DE24C</generatorID>
+<ownerDesignName>modelado-reporteria</ownerDesignName>
+<engineerTo>
+<item key="E8497FE5-32B1-ADDE-CA07-A14DE70D4A78" value="true"/>
+</engineerTo>
+<referedAttribute>C6BB12E5-D37F-5628-AF70-3E0A31DC6E82</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="tiempo_incidencia" id="6B8EDE3C-5120-5472-3AA2-1F9F0AD3F078">
+<createdBy>practicante.ti2</createdBy>
+<createdTime>2025-11-24 19:49:53 UTC</createdTime>
+<ownerDesignName>modelado-reporteria</ownerDesignName>
+<engineerTo>
+<item key="E8497FE5-32B1-ADDE-CA07-A14DE70D4A78" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="932AE63B-FF49-5908-D765-B86CF213425E" name="features PK">
+<createdBy>practicante.ti2</createdBy>
+<createdTime>2025-11-24 17:11:25 UTC</createdTime>
+<ownerDesignName>modelado-reporteria</ownerDesignName>
+<engineerTo>
+<item key="E8497FE5-32B1-ADDE-CA07-A14DE70D4A78" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>76974972-831C-4400-E047-DED573A07068</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
 </Entity>

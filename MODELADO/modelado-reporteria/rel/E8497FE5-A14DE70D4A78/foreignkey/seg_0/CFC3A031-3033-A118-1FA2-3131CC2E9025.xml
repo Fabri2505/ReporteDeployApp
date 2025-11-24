@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="CFC3A031-3033-A118-1FA2-3131CC2E9025" containerWithKeyObject="C8578527-EED8-A93A-2E0D-53FEFC973873" localFKIndex="AAA405B1-519F-D769-B0B5-15E981108752" name="area_afectada_area_FK">
+<createdBy>practicante.ti2</createdBy>
+<createdTime>2025-11-24 21:20:50 UTC</createdTime>
+<generatorID>9D7899E6-AD34-3ECB-AC79-4BCA8596D3E6</generatorID>
+<ownerDesignName>modelado-reporteria</ownerDesignName>
+<referredTableLongName>area</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>8806E232-C5C7-5854-F888-52B5AEEE5812</referredTableID>
+<keyObject>B39E407C-B78B-666B-FB02-9580EAF4AE77</keyObject>
+<referredKeyID>B39E407C-B78B-666B-FB02-9580EAF4AE77</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>id_area</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

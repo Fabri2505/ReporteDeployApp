@@ -1,0 +1,136 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="5A1AC6BF-C705-78EB-29CB-F1076F41DE32" name="features">
+<createdBy>practicante.ti2</createdBy>
+<createdTime>2025-11-24 21:20:50 UTC</createdTime>
+<generatorID>2A6C7ACB-4F61-E3ED-5BBD-A9654850C858</generatorID>
+<ownerDesignName>modelado-reporteria</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_feature" id="2B9F1221-8F27-CF18-09C8-24EE9BC5E7DB">
+<createdBy>practicante.ti2</createdBy>
+<createdTime>2025-11-24 21:20:50 UTC</createdTime>
+<generatorID>76974972-831C-4400-E047-DED573A07068</generatorID>
+<ownerDesignName>modelado-reporteria</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nivel_riesgo" id="1B27A618-D746-27E2-7E0B-515210C593C4">
+<createdBy>practicante.ti2</createdBy>
+<createdTime>2025-11-24 21:20:50 UTC</createdTime>
+<generatorID>7E6FE612-600D-75BC-DAC1-6562E830CA9A</generatorID>
+<ownerDesignName>modelado-reporteria</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 CHAR</dataTypeSize>
+<ownDataTypeParameters>20 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="downtime" id="9ACE7821-F1A4-7332-EAF4-2EE527D1897C">
+<createdBy>practicante.ti2</createdBy>
+<createdTime>2025-11-24 21:20:50 UTC</createdTime>
+<generatorID>33FAFA1C-6119-5B3D-27E3-64EC3197FCAF</generatorID>
+<ownerDesignName>modelado-reporteria</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="deploy_id_deploy" id="7C647010-3ACB-E155-DC56-A6484EA796C2">
+<createdBy>practicante.ti2</createdBy>
+<createdTime>2025-11-24 21:20:50 UTC</createdTime>
+<generatorID>ED613DE8-D575-BA11-6897-7FE5837C2183</generatorID>
+<ownerDesignName>modelado-reporteria</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="D1645A44-6F3E-D414-747F-AC9D56E7FB1F" referredColumn="AC74648D-6D1E-6C90-CECD-F0E7E86620F7"/>
+</associations>
+</Column>
+<Column name="plan_rollback_id_plan_rollback" id="4896B5D7-A696-9A98-0FA9-125ABE31DE4C">
+<createdBy>practicante.ti2</createdBy>
+<createdTime>2025-11-24 21:20:50 UTC</createdTime>
+<generatorID>F1211EEF-823D-8EA0-7AFE-3F82FC1B9689</generatorID>
+<ownerDesignName>modelado-reporteria</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="B41E711E-C7F1-FE9A-6559-1221AE7E98DD" referredColumn="8C450E4A-B936-E726-E3B9-53D1582FF3A4"/>
+</associations>
+</Column>
+<Column name="tiempo_incidencia" id="C2B96B30-1119-E490-8E9B-4707AA6610F1">
+<createdBy>practicante.ti2</createdBy>
+<createdTime>2025-11-24 21:20:50 UTC</createdTime>
+<generatorID>6B8EDE3C-5120-5472-3AA2-1F9F0AD3F078</generatorID>
+<ownerDesignName>modelado-reporteria</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="083A3F79-6ECD-D725-88E0-994F4AF64721" name="features_PK">
+<createdBy>practicante.ti2</createdBy>
+<createdTime>2025-11-24 21:20:50 UTC</createdTime>
+<generatorID>932AE63B-FF49-5908-D765-B86CF213425E</generatorID>
+<ownerDesignName>modelado-reporteria</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="2B9F1221-8F27-CF18-09C8-24EE9BC5E7DB"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="9F8B587B-96D0-32BF-6080-03B375FBE5EF" name="features__IDX">
+<createdBy>practicante.ti2</createdBy>
+<createdTime>2025-11-24 21:20:50 UTC</createdTime>
+<ownerDesignName>modelado-reporteria</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<relationGeneratorID>1F81ADE5-DDF0-6AF1-DEB5-7EC769904B1B</relationGeneratorID>
+<indexColumnUsage>
+<colUsage columnID="7C647010-3ACB-E155-DC56-A6484EA796C2"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="3F28F2AD-EF11-0F1D-342E-2AF5BA80AD2B" name="features_plan_rollback_FK">
+<createdBy>practicante.ti2</createdBy>
+<createdTime>2025-11-24 21:20:50 UTC</createdTime>
+<generatorID>BA85DD7C-2338-DFFC-A8AA-6692642DE24C</generatorID>
+<ownerDesignName>modelado-reporteria</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="4896B5D7-A696-9A98-0FA9-125ABE31DE4C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="63C1AC74-A9FE-598D-D290-A4745DEBB5DD" name="features_deploy_FK">
+<createdBy>practicante.ti2</createdBy>
+<createdTime>2025-11-24 21:20:50 UTC</createdTime>
+<generatorID>1F81ADE5-DDF0-6AF1-DEB5-7EC769904B1B</generatorID>
+<ownerDesignName>modelado-reporteria</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="7C647010-3ACB-E155-DC56-A6484EA796C2"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

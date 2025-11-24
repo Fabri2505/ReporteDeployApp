@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="3006BFF9-476D-856B-10DB-BE6172AA0D94" containerWithKeyObject="4C249899-33CC-E345-6BA1-F57E367DBC84" localFKIndex="6881F584-748A-7492-4713-1535E050DB7E" name="Backup_det_validaciones_FK">
+<createdBy>practicante.ti2</createdBy>
+<createdTime>2025-11-24 21:20:50 UTC</createdTime>
+<generatorID>B11586FF-9004-5E7C-ECF3-03688DB6C581</generatorID>
+<ownerDesignName>modelado-reporteria</ownerDesignName>
+<referredTableLongName>det_validaciones</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>8E6214C9-1351-AAAF-C9FB-EB314A87D1EB</referredTableID>
+<keyObject>866F5B84-25A9-C514-B091-BAC390393E29</keyObject>
+<referredKeyID>866F5B84-25A9-C514-B091-BAC390393E29</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>id_det_valid</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

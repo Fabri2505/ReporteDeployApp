@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="06BE3FA4-E744-FFA8-DDEC-B7B683A6AD47" containerWithKeyObject="D1C80EAC-FE9B-7B10-691B-CA4C87670CCD" localFKIndex="E6D3FA8D-BDDD-6C95-ED55-F8A69D91B32C" name="lista_rolback_plan_rollback_FK">
+<createdBy>practicante.ti2</createdBy>
+<createdTime>2025-11-24 21:20:50 UTC</createdTime>
+<generatorID>FDEB9C68-9BF9-5F91-1B4F-08ADD21A9AE4</generatorID>
+<ownerDesignName>modelado-reporteria</ownerDesignName>
+<referredTableLongName>plan_rollback</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>5402A11F-21C8-A281-9939-E4F9F628D910</referredTableID>
+<keyObject>75D8CCC4-6EA0-6EB8-FB1E-59B80FB90D4E</keyObject>
+<referredKeyID>75D8CCC4-6EA0-6EB8-FB1E-59B80FB90D4E</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>id_plan_rollback</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

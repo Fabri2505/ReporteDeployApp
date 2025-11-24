@@ -14,4 +14,59 @@
 <maxVolumes>9999999</maxVolumes>
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id_paso_rollback" id="F07BF20B-66A5-696D-D10F-E8353D09A534">
+<createdBy>practicante.ti2</createdBy>
+<createdTime>2025-11-24 17:16:03 UTC</createdTime>
+<ownerDesignName>modelado-reporteria</ownerDesignName>
+<engineerTo>
+<item key="E8497FE5-32B1-ADDE-CA07-A14DE70D4A78" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nom_paso_rollback" id="0E6AF9F8-E5C0-5355-DBF3-8AF43C6ECD76">
+<createdBy>practicante.ti2</createdBy>
+<createdTime>2025-11-24 17:20:14 UTC</createdTime>
+<ownerDesignName>modelado-reporteria</ownerDesignName>
+<engineerTo>
+<item key="E8497FE5-32B1-ADDE-CA07-A14DE70D4A78" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 CHAR</dataTypeSize>
+<ownDataTypeParameters>20 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_plan_rollback" id="F5F9AC5B-BC01-7603-047C-4D4348B2FA11">
+<createdBy>practicante.ti2</createdBy>
+<createdTime>2025-11-24 17:16:51 UTC</createdTime>
+<generatorID>FDEB9C68-9BF9-5F91-1B4F-08ADD21A9AE4</generatorID>
+<ownerDesignName>modelado-reporteria</ownerDesignName>
+<engineerTo>
+<item key="E8497FE5-32B1-ADDE-CA07-A14DE70D4A78" value="true"/>
+</engineerTo>
+<referedAttribute>C6BB12E5-D37F-5628-AF70-3E0A31DC6E82</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="70B1EB63-683F-C9B4-5F84-7D80D10C45BA" name="lista_rolback PK">
+<createdBy>practicante.ti2</createdBy>
+<createdTime>2025-11-24 17:16:22 UTC</createdTime>
+<ownerDesignName>modelado-reporteria</ownerDesignName>
+<engineerTo>
+<item key="E8497FE5-32B1-ADDE-CA07-A14DE70D4A78" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>F07BF20B-66A5-696D-D10F-E8353D09A534</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
 </Entity>

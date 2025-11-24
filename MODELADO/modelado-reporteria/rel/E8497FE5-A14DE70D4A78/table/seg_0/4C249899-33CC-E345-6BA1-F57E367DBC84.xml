@@ -1,0 +1,112 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="4C249899-33CC-E345-6BA1-F57E367DBC84" name="Backup">
+<createdBy>practicante.ti2</createdBy>
+<createdTime>2025-11-24 21:20:50 UTC</createdTime>
+<generatorID>56C0761E-ED46-5F5A-B0E3-CEF1FA9B91A1</generatorID>
+<ownerDesignName>modelado-reporteria</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_backup" id="FE62A00F-DDBF-5CF9-D64D-180460B52309">
+<createdBy>practicante.ti2</createdBy>
+<createdTime>2025-11-24 21:20:50 UTC</createdTime>
+<generatorID>9B1DFDDA-FD80-32C6-947D-5A02D34C47B1</generatorID>
+<ownerDesignName>modelado-reporteria</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="fec_hor" id="FD4952C2-BCCD-9E0C-0C48-738E91AF9436">
+<createdBy>practicante.ti2</createdBy>
+<createdTime>2025-11-24 21:20:50 UTC</createdTime>
+<generatorID>4C183398-6BF6-4DE4-1D13-86A7428CAC92</generatorID>
+<ownerDesignName>modelado-reporteria</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="tipo" id="532E6739-7121-EB6C-AE56-802A419A8BC0">
+<createdBy>practicante.ti2</createdBy>
+<createdTime>2025-11-24 21:20:50 UTC</createdTime>
+<generatorID>69D6B389-548E-4F67-51EF-664D5DD35E0D</generatorID>
+<ownerDesignName>modelado-reporteria</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 CHAR</dataTypeSize>
+<ownDataTypeParameters>20 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="det_validaciones_id_det_valid" id="7CB045C1-9AB5-1AB2-EFD7-24131832CACF">
+<createdBy>practicante.ti2</createdBy>
+<createdTime>2025-11-24 21:20:50 UTC</createdTime>
+<generatorID>B6F01942-737A-250B-2FAC-622091553385</generatorID>
+<ownerDesignName>modelado-reporteria</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="3006BFF9-476D-856B-10DB-BE6172AA0D94" referredColumn="2273910F-2EAD-E34E-2BAF-244A04CB5AFA"/>
+</associations>
+</Column>
+<Column name="Responsables_cod" id="89E6DCEC-049B-BB05-8E3D-9AD57E4C6AE9">
+<createdBy>practicante.ti2</createdBy>
+<createdTime>2025-11-24 21:20:50 UTC</createdTime>
+<generatorID>B98AED38-912B-6AC2-BBB5-902CE6080356</generatorID>
+<ownerDesignName>modelado-reporteria</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="32E9955E-2624-8D94-B233-E8D9667345B5" referredColumn="2D72FE0D-5CE4-BEFB-F563-5BBCAC981737"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="3DE700BB-2274-54B9-A123-B9DE9FCC33F7" name="Backup_PK">
+<createdBy>practicante.ti2</createdBy>
+<createdTime>2025-11-24 21:20:50 UTC</createdTime>
+<generatorID>4230A181-1C54-95B4-DFBA-892E3BE4ECB4</generatorID>
+<ownerDesignName>modelado-reporteria</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="FE62A00F-DDBF-5CF9-D64D-180460B52309"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="6881F584-748A-7492-4713-1535E050DB7E" name="Backup_det_validaciones_FK">
+<createdBy>practicante.ti2</createdBy>
+<createdTime>2025-11-24 21:20:50 UTC</createdTime>
+<generatorID>B11586FF-9004-5E7C-ECF3-03688DB6C581</generatorID>
+<ownerDesignName>modelado-reporteria</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="7CB045C1-9AB5-1AB2-EFD7-24131832CACF"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="F103DC9D-4FF8-47C8-D443-0D8970C0DB0A" name="Backup_Responsables_FK">
+<createdBy>practicante.ti2</createdBy>
+<createdTime>2025-11-24 21:20:50 UTC</createdTime>
+<generatorID>B1503D37-4F24-F5FC-6E7F-92E38B6ACD5C</generatorID>
+<ownerDesignName>modelado-reporteria</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="89E6DCEC-049B-BB05-8E3D-9AD57E4C6AE9"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

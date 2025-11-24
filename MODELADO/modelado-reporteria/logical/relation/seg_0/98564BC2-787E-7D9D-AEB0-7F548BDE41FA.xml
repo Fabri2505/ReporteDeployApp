@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Relation_23" directorySegmentName="seg_0" id="98564BC2-787E-7D9D-AEB0-7F548BDE41FA">
+<createdBy>practicante.ti2</createdBy>
+<createdTime>2025-11-24 17:05:07 UTC</createdTime>
+<ownerDesignName>modelado-reporteria</ownerDesignName>
+<engineerTo>
+<item key="E8497FE5-32B1-ADDE-CA07-A14DE70D4A78" value="true"/>
+</engineerTo>
+<sourcePk>6E297FBB-9FEF-9F76-5536-1A35647E0BD6</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>9E96D477-797D-90F7-E12F-7120EE7FF7E1</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>6960E5ED-06D0-4B02-6EDC-F98A452931C6</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

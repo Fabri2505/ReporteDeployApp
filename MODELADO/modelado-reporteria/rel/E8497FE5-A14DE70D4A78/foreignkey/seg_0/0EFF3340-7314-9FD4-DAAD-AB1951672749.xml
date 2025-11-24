@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="0EFF3340-7314-9FD4-DAAD-AB1951672749" containerWithKeyObject="8E6214C9-1351-AAAF-C9FB-EB314A87D1EB" localFKIndex="3A48CBFD-01DD-1546-4168-F3BC47BBA620" name="det_validaciones_validacion_FK">
+<createdBy>practicante.ti2</createdBy>
+<createdTime>2025-11-24 21:20:50 UTC</createdTime>
+<generatorID>24F85727-DD12-A089-936F-07DAD307A20A</generatorID>
+<ownerDesignName>modelado-reporteria</ownerDesignName>
+<referredTableLongName>validacion</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>ADA7EC92-A75C-7238-A066-9C28462F7792</referredTableID>
+<keyObject>149AC95B-9147-AD81-6D16-B838E88F4490</keyObject>
+<referredKeyID>149AC95B-9147-AD81-6D16-B838E88F4490</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>id_valid</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

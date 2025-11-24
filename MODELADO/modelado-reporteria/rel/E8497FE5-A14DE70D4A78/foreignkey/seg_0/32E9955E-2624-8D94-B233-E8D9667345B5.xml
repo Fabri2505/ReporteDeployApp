@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="32E9955E-2624-8D94-B233-E8D9667345B5" containerWithKeyObject="4C249899-33CC-E345-6BA1-F57E367DBC84" localFKIndex="F103DC9D-4FF8-47C8-D443-0D8970C0DB0A" name="Backup_Responsables_FK">
+<createdBy>practicante.ti2</createdBy>
+<createdTime>2025-11-24 21:20:50 UTC</createdTime>
+<generatorID>B1503D37-4F24-F5FC-6E7F-92E38B6ACD5C</generatorID>
+<ownerDesignName>modelado-reporteria</ownerDesignName>
+<referredTableLongName>Responsables</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>6D14DBF5-4D7D-96AF-F4AD-F11DADAFB241</referredTableID>
+<keyObject>3235799D-2915-046D-B6DC-C129FEBDF720</keyObject>
+<referredKeyID>3235799D-2915-046D-B6DC-C129FEBDF720</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>cod</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

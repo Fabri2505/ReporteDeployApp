@@ -1,0 +1,92 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="35F92183-AF74-D03D-A25A-1EA618B6D369" name="det_resp_deploy">
+<createdBy>practicante.ti2</createdBy>
+<createdTime>2025-11-24 21:20:50 UTC</createdTime>
+<generatorID>2A0F18A3-91DB-3283-2F91-D4F9302D0B57</generatorID>
+<ownerDesignName>modelado-reporteria</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Responsables_cod" id="E414BCE2-041F-949B-ACD5-4146F8B8BB49">
+<createdBy>practicante.ti2</createdBy>
+<createdTime>2025-11-24 21:20:50 UTC</createdTime>
+<generatorID>1A9E629D-F20B-0341-E6E1-2457B6C60F12</generatorID>
+<ownerDesignName>modelado-reporteria</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="3FFB8BB8-A05E-36B7-1B9C-A4F076B2E0B5" referredColumn="2D72FE0D-5CE4-BEFB-F563-5BBCAC981737"/>
+</associations>
+</Column>
+<Column name="deploy_id_deploy" id="8F8E86C7-6C42-173C-1959-18D8801A03E6">
+<createdBy>practicante.ti2</createdBy>
+<createdTime>2025-11-24 21:20:50 UTC</createdTime>
+<generatorID>B856C671-BCCF-A8DE-E8A3-41F6D7A0B1E5</generatorID>
+<ownerDesignName>modelado-reporteria</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="47FAABE8-A6BF-D209-6191-135FF9F075C5" referredColumn="AC74648D-6D1E-6C90-CECD-F0E7E86620F7"/>
+</associations>
+</Column>
+<Column name="puesto" id="787D2B44-99FF-5B0F-1146-164AC631936C">
+<createdBy>practicante.ti2</createdBy>
+<createdTime>2025-11-24 21:20:50 UTC</createdTime>
+<generatorID>241B7AB5-A08F-003F-F63D-9A8213B8A13D</generatorID>
+<ownerDesignName>modelado-reporteria</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 CHAR</dataTypeSize>
+<ownDataTypeParameters>20 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="8D8487FD-DAC5-8843-7F88-CB2C381167FD" name="det_resp_deploy_PK">
+<createdBy>practicante.ti2</createdBy>
+<createdTime>2025-11-24 21:20:50 UTC</createdTime>
+<generatorID>589962ED-6C91-1E8D-8E5B-E4745372D41E</generatorID>
+<ownerDesignName>modelado-reporteria</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="8F8E86C7-6C42-173C-1959-18D8801A03E6"/>
+<colUsage columnID="E414BCE2-041F-949B-ACD5-4146F8B8BB49"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="08B20E9E-C293-B3CB-6769-6F2DFE8D4FB5" name="det_resp_deploy_Responsables_FK">
+<createdBy>practicante.ti2</createdBy>
+<createdTime>2025-11-24 21:20:50 UTC</createdTime>
+<generatorID>F290AF02-8E6E-59E4-9886-6E117602FD34</generatorID>
+<ownerDesignName>modelado-reporteria</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E414BCE2-041F-949B-ACD5-4146F8B8BB49"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="F2D9F63F-F478-F95F-A7CB-A01534F373BC" name="det_resp_deploy_deploy_FK">
+<createdBy>practicante.ti2</createdBy>
+<createdTime>2025-11-24 21:20:50 UTC</createdTime>
+<generatorID>F0076915-8BF0-212C-178C-160B8438C076</generatorID>
+<ownerDesignName>modelado-reporteria</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="8F8E86C7-6C42-173C-1959-18D8801A03E6"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

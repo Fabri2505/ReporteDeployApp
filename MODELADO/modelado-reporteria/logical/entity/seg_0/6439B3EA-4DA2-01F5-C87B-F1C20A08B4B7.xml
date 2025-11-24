@@ -1,0 +1,85 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="6439B3EA-4DA2-01F5-C87B-F1C20A08B4B7" name="incidencia">
+<createdBy>practicante.ti2</createdBy>
+<createdTime>2025-11-24 19:45:59 UTC</createdTime>
+<ownerDesignName>modelado-reporteria</ownerDesignName>
+<engineerTo>
+<item key="E8497FE5-32B1-ADDE-CA07-A14DE70D4A78" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id_incidencia" id="33F260F5-2E60-4C80-D505-4268A4D291FC">
+<createdBy>practicante.ti2</createdBy>
+<createdTime>2025-11-24 19:46:09 UTC</createdTime>
+<ownerDesignName>modelado-reporteria</ownerDesignName>
+<engineerTo>
+<item key="E8497FE5-32B1-ADDE-CA07-A14DE70D4A78" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="descrip" id="DF2F478E-5F00-4EB0-FF01-E36B6AE7C67E">
+<createdBy>practicante.ti2</createdBy>
+<createdTime>2025-11-24 19:48:21 UTC</createdTime>
+<ownerDesignName>modelado-reporteria</ownerDesignName>
+<engineerTo>
+<item key="E8497FE5-32B1-ADDE-CA07-A14DE70D4A78" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>400 CHAR</dataTypeSize>
+<ownDataTypeParameters>400 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="resolucion" id="8F38B5D9-870C-E9C1-F57F-39B6F44F0F2B">
+<createdBy>practicante.ti2</createdBy>
+<createdTime>2025-11-24 19:49:17 UTC</createdTime>
+<ownerDesignName>modelado-reporteria</ownerDesignName>
+<engineerTo>
+<item key="E8497FE5-32B1-ADDE-CA07-A14DE70D4A78" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>400 CHAR</dataTypeSize>
+<ownDataTypeParameters>400 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_feature" id="E4DB3728-5D01-E14E-C426-4F8ADB3E24FB">
+<createdBy>practicante.ti2</createdBy>
+<createdTime>2025-11-24 20:20:52 UTC</createdTime>
+<generatorID>7BA26BBB-026F-9A5B-126F-77640577303C</generatorID>
+<ownerDesignName>modelado-reporteria</ownerDesignName>
+<engineerTo>
+<item key="E8497FE5-32B1-ADDE-CA07-A14DE70D4A78" value="true"/>
+</engineerTo>
+<referedAttribute>76974972-831C-4400-E047-DED573A07068</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="DA32093C-FDF1-82CA-CD55-591CDDEE89C6" name="incidencia PK">
+<createdBy>practicante.ti2</createdBy>
+<createdTime>2025-11-24 19:48:19 UTC</createdTime>
+<ownerDesignName>modelado-reporteria</ownerDesignName>
+<engineerTo>
+<item key="E8497FE5-32B1-ADDE-CA07-A14DE70D4A78" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>33F260F5-2E60-4C80-D505-4268A4D291FC</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

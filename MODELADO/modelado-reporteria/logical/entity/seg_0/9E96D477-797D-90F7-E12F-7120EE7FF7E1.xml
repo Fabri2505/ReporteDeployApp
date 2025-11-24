@@ -14,4 +14,59 @@
 <maxVolumes>9999999</maxVolumes>
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id_paso" id="CA2CB69D-C405-D8E9-384E-ABB1FB568C17">
+<createdBy>practicante.ti2</createdBy>
+<createdTime>2025-11-24 20:41:34 UTC</createdTime>
+<ownerDesignName>modelado-reporteria</ownerDesignName>
+<engineerTo>
+<item key="E8497FE5-32B1-ADDE-CA07-A14DE70D4A78" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nom_paso" id="66B3E045-37F8-6C65-5C31-ABD17DA89130">
+<createdBy>practicante.ti2</createdBy>
+<createdTime>2025-11-24 20:41:48 UTC</createdTime>
+<ownerDesignName>modelado-reporteria</ownerDesignName>
+<engineerTo>
+<item key="E8497FE5-32B1-ADDE-CA07-A14DE70D4A78" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30 CHAR</dataTypeSize>
+<ownDataTypeParameters>30 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_despliegue" id="97E76BD8-372E-0A21-0F6B-0F49355442FE">
+<createdBy>practicante.ti2</createdBy>
+<createdTime>2025-11-24 20:39:58 UTC</createdTime>
+<generatorID>3FE3F633-5498-0FD5-5E86-8CB928593346</generatorID>
+<ownerDesignName>modelado-reporteria</ownerDesignName>
+<engineerTo>
+<item key="E8497FE5-32B1-ADDE-CA07-A14DE70D4A78" value="true"/>
+</engineerTo>
+<referedAttribute>62901746-0217-FCE4-47CD-062E283D8124</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="6E297FBB-9FEF-9F76-5536-1A35647E0BD6" name="items_deploy PK">
+<createdBy>practicante.ti2</createdBy>
+<createdTime>2025-11-24 20:41:47 UTC</createdTime>
+<ownerDesignName>modelado-reporteria</ownerDesignName>
+<engineerTo>
+<item key="E8497FE5-32B1-ADDE-CA07-A14DE70D4A78" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>CA2CB69D-C405-D8E9-384E-ABB1FB568C17</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
 </Entity>
