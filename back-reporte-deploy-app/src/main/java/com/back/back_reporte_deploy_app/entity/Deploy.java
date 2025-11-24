@@ -46,4 +46,7 @@ public class Deploy {
 
     @OneToMany(mappedBy = "deploy")
     private List<DetRespDeploy> detRespDeploys;
+
+    @OneToMany(mappedBy = "deploy")
+    private List<DetValidacion> detValidaciones;
 }

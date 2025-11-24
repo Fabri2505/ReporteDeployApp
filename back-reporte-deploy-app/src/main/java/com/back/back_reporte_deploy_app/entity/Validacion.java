@@ -1,5 +1,7 @@
 package com.back.back_reporte_deploy_app.entity;
 
+import java.util.List;
+
 import com.back.back_reporte_deploy_app.enums.TipoValidacion;
 
 import jakarta.persistence.Column;
@@ -7,6 +9,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
 import lombok.Data;
 
 @Data
@@ -21,5 +24,7 @@ public class Validacion {
     @Column(length = 20)
     private TipoValidacion tipo;
 
-    
+    @OneToMany(mappedBy = "validacion")
+    private List<DetValidacion> detValidaciones;
+
 }
