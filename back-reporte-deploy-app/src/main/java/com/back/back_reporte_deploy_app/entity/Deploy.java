@@ -1,5 +1,42 @@
 package com.back.back_reporte_deploy_app.entity;
 
-public class Deploy {
+import java.time.LocalDate;
+import java.time.LocalTime;
 
+import com.back.back_reporte_deploy_app.enums.TipoDeploy;
+
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
+import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
+import lombok.Data;
+
+@Data
+@Entity
+public class Deploy {
+    
+    @Id
+    private Long id;
+    private String version;
+
+    @Enumerated(EnumType.STRING)
+    @Column(length = 10)
+    private TipoDeploy tipo;
+
+    private LocalDate fecha;
+    private LocalTime horaIni;
+    private LocalTime horaFin;
+    private LocalTime horaFinReal;
+    private String sprint;
+    private String rutaReporte;
+    private Boolean resultado;
+
+    // Relaciones
+    @ManyToOne
+    @JoinColumn(name = "id_proyecto")
+    private Proyecto proyecto;
+    
 }

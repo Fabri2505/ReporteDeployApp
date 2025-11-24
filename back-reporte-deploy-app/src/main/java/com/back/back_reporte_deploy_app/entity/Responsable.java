@@ -9,7 +9,7 @@ import lombok.Data;
 @Data
 public class Responsable {
     @Id
-    private Integer id;
+    private Long id;
 
     @Column(length = 40)
     private String nom;
