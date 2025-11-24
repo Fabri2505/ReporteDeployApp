@@ -1,17 +1,17 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Relation_14" directorySegmentName="seg_0" id="B11586FF-9004-5E7C-ECF3-03688DB6C581">
-<createdBy>USUARIO</createdBy>
-<createdTime>2025-11-23 05:02:08 UTC</createdTime>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Relation_36" directorySegmentName="seg_0" id="B87A8E40-3E87-8F08-5496-2F48D983F056">
+<createdBy>practicante.ti2</createdBy>
+<createdTime>2025-11-24 22:58:20 UTC</createdTime>
 <ownerDesignName>modelado-reporteria</ownerDesignName>
 <engineerTo>
 <item key="E8497FE5-32B1-ADDE-CA07-A14DE70D4A78" value="true"/>
 </engineerTo>
-<sourcePk>8F5B027E-45E0-71F7-697C-AA3FDCE0516B</sourcePk>
+<sourcePk>6C8A3920-6BB7-838D-ECD8-1A6F366C1F50</sourcePk>
 <identifying>false</identifying>
 <optionalSource>true</optionalSource>
 <optionalTarget>false</optionalTarget>
 <sourceCardinality>1</sourceCardinality>
-<sourceEntity>ADE2E6DC-B280-25A0-94F5-2CF070A5B337</sourceEntity>
+<sourceEntity>11937D9B-D8D8-E817-3346-C18D07D204DA</sourceEntity>
 <targetCardinalityString>*</targetCardinalityString>
 <targetEntity>56C0761E-ED46-5F5A-B0E3-CEF1FA9B91A1</targetEntity>
 <transferable>true</transferable>

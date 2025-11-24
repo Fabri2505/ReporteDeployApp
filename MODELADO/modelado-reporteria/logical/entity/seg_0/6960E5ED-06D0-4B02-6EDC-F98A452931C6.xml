@@ -15,20 +15,6 @@
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
-<Attribute name="id_feature" id="0824FAA9-4312-09AC-FA09-051A1DE2B2D7">
-<createdBy>practicante.ti2</createdBy>
-<createdTime>2025-11-24 17:15:47 UTC</createdTime>
-<generatorID>B1564368-8737-B51A-A7E9-9AC75B80A57A</generatorID>
-<ownerDesignName>modelado-reporteria</ownerDesignName>
-<engineerTo>
-<item key="E8497FE5-32B1-ADDE-CA07-A14DE70D4A78" value="true"/>
-</engineerTo>
-<referedAttribute>76974972-831C-4400-E047-DED573A07068</referedAttribute>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT011</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
 <Attribute name="id_paso" id="CD72F8A0-8FB9-103F-0DDA-7B72A4D893C0">
 <createdBy>practicante.ti2</createdBy>
 <createdTime>2025-11-24 20:44:51 UTC</createdTime>
@@ -53,6 +39,20 @@
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_deploy" id="19B73466-6658-4D4D-465B-88125E58DD30">
+<createdBy>practicante.ti2</createdBy>
+<createdTime>2025-11-24 22:44:03 UTC</createdTime>
+<generatorID>B1564368-8737-B51A-A7E9-9AC75B80A57A</generatorID>
+<ownerDesignName>modelado-reporteria</ownerDesignName>
+<engineerTo>
+<item key="E8497FE5-32B1-ADDE-CA07-A14DE70D4A78" value="true"/>
+</engineerTo>
+<referedAttribute>ED613DE8-D575-BA11-6897-7FE5837C2183</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 </attributes>

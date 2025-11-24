@@ -53,15 +53,15 @@
 <dataTypeSize>400 CHAR</dataTypeSize>
 <ownDataTypeParameters>400 CHAR,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="id_feature" id="E4DB3728-5D01-E14E-C426-4F8ADB3E24FB">
+<Attribute name="id_deploy" id="CB788B03-0FC7-7614-4E8F-6F7CA0A9E0A4">
 <createdBy>practicante.ti2</createdBy>
-<createdTime>2025-11-24 20:20:52 UTC</createdTime>
+<createdTime>2025-11-24 22:44:03 UTC</createdTime>
 <generatorID>7BA26BBB-026F-9A5B-126F-77640577303C</generatorID>
 <ownerDesignName>modelado-reporteria</ownerDesignName>
 <engineerTo>
 <item key="E8497FE5-32B1-ADDE-CA07-A14DE70D4A78" value="true"/>
 </engineerTo>
-<referedAttribute>76974972-831C-4400-E047-DED573A07068</referedAttribute>
+<referedAttribute>ED613DE8-D575-BA11-6897-7FE5837C2183</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT011</logicalDatatype>
