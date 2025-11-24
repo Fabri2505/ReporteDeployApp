@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="modelado-reporteria" id="4D22CC99-3042-EE95-CD50-55E47DFAEF5B" version="3.5">
+<createdBy>USUARIO</createdBy>
+<createdTime>2025-11-21 03:59:21 UTC</createdTime>
+<ownerDesignName>modelado</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>4D22CC99-3042-EE95-CD50-55E47DFAEF5B</designId>
+</OSDM_Design>

@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Relation_15" directorySegmentName="seg_0" id="24F85727-DD12-A089-936F-07DAD307A20A">
+<createdBy>USUARIO</createdBy>
+<createdTime>2025-11-23 05:02:14 UTC</createdTime>
+<ownerDesignName>modelado-reporteria</ownerDesignName>
+<engineerTo>
+<item key="E8497FE5-32B1-ADDE-CA07-A14DE70D4A78" value="true"/>
+</engineerTo>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>C861ED94-3986-8181-97C9-30663AF9F3E7</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>ADE2E6DC-B280-25A0-94F5-2CF070A5B337</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>
