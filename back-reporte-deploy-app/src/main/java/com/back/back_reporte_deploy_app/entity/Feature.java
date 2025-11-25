@@ -31,4 +31,15 @@ public class Feature extends Deploy{
     @OneToMany(mappedBy = "feature")
     private List<ComponenteDeploy> componentesDeploy;
     
+    @OneToMany(mappedBy = "feature")
+    private List<Notificacion> notificaciones;
+
+    @OneToMany(mappedBy = "feature")
+    private List<Incidente> incidentes;
+
+    @OneToMany(mappedBy = "feature")
+    private List<Cambio> cambios;
+
+    @OneToMany(mappedBy = "feature")
+    private List<DetDeploy> detDeploys;
 }

@@ -1,0 +1,26 @@
+package com.back.back_reporte_deploy_app.entity;
+
+import java.util.List;
+
+import com.back.back_reporte_deploy_app.enums.TipoDeploy;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
+import lombok.Data;
+
+@Data
+@Entity
+public class ProcesoDeploy {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    private String nombre;
+    private TipoDeploy tipo;
+
+    @OneToMany(mappedBy = "procesoDeploy")
+    private List<PasoDeploy> pasos;
+}
