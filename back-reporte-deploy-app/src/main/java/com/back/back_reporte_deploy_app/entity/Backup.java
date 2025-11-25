@@ -9,6 +9,8 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import lombok.Data;
 
 @Data
@@ -23,5 +25,11 @@ public class Backup {
     @Column(length = 20)
     private TipoBackup tipoBackup;
 
+    @ManyToOne
+    @JoinColumn(name = "id_deploy")
+    private Deploy deploy;
     
+    @ManyToOne
+    @JoinColumn(name = "id_responsable")
+    private Responsable responsable;
 }

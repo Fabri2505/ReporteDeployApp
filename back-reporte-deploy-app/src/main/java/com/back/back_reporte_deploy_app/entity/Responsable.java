@@ -25,4 +25,7 @@ public class Responsable {
 
     @OneToMany(mappedBy = "responsable")
     private List<DetRespDeploy> detRespDeploys;
+
+    @OneToMany(mappedBy = "responsable")
+    private List<Backup> backups;
 }
