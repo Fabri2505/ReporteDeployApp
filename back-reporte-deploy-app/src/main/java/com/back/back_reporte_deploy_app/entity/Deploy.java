@@ -10,7 +10,11 @@ import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.Inheritance;
+import jakarta.persistence.InheritanceType;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToMany;
@@ -18,9 +22,11 @@ import lombok.Data;
 
 @Data
 @Entity
+@Inheritance(strategy = InheritanceType.JOINED)
 public class Deploy {
     
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String version;
 
@@ -52,4 +58,7 @@ public class Deploy {
 
     @OneToMany(mappedBy = "deploy")
     private List<Backup> backups;
+
+    @OneToMany(mappedBy = "deploy")
+    private List<Feature> features;
 }

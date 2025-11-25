@@ -17,4 +17,7 @@ public class PlanRollback {
 
     @OneToMany(mappedBy = "planRollback")
     private List<PasosRollBack> pasosRollBacks;
+
+    @OneToMany(mappedBy = "planRollback")
+    private List<Feature> features;
 }
