@@ -27,7 +27,7 @@
 <logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="nom_paso_rollback" id="0E6AF9F8-E5C0-5355-DBF3-8AF43C6ECD76">
+<Attribute name="descripcion" id="0E6AF9F8-E5C0-5355-DBF3-8AF43C6ECD76">
 <createdBy>practicante.ti2</createdBy>
 <createdTime>2025-11-24 17:20:14 UTC</createdTime>
 <ownerDesignName>modelado-reporteria</ownerDesignName>
