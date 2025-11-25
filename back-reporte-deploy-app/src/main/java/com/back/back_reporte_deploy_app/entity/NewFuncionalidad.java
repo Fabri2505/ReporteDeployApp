@@ -1,26 +1,24 @@
 package com.back.back_reporte_deploy_app.entity;
 
-import java.util.List;
-
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.OneToMany;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import lombok.Data;
 
 @Data
 @Entity
-public class PlanRollback {
+public class NewFuncionalidad {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    
+    private String descrip;
 
-    private String nom;
+    @ManyToOne
+    @JoinColumn(name = "id_feature")
+    private Feature feature;
 
-    @OneToMany(mappedBy = "planRollback")
-    private List<PasosRollBack> pasosRollBacks;
-
-    @OneToMany(mappedBy = "planRollback")
-    private List<Feature> features;
 }
