@@ -1,8 +1,11 @@
 package com.back.back_reporte_deploy_app.entity;
 
+import java.util.List;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
+import jakarta.persistence.OneToMany;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
@@ -19,7 +22,7 @@ public class Feature extends Deploy{
     @JoinColumn(name = "id_plan_rollback")
     private PlanRollback planRollback;
 
-    @ManyToOne
-    @JoinColumn(name = "id_deploy")
-    private Deploy deploy;
+    @OneToMany(mappedBy = "feature")
+    private List<AreaAfectada> areasAfectadas;
+    
 }

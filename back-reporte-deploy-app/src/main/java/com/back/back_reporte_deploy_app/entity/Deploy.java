@@ -58,7 +58,5 @@ public class Deploy {
 
     @OneToMany(mappedBy = "deploy")
     private List<Backup> backups;
-
-    @OneToMany(mappedBy = "deploy")
-    private List<Feature> features;
+    
 }
