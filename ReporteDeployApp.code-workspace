@@ -1,0 +1,37 @@
+{
+    "folders": [
+        {
+            "name": "Frontend (Angular)",
+            "path": "front-reporte-deploy-app"
+        },
+        {
+            "name": "Backend (Spring Boot)",
+            "path": "back-reporte-deploy-app"
+        }
+    ],
+    "settings": {
+        // Configuraciones específicas del workspace
+        "typescript.tsdk": "node_modules/typescript/lib",
+        "angular.enable-experimental-ivy-prompt": false,
+        "workbench.colorCustomizations": {
+            "activityBar.activeBackground": "#37dd2e",
+            "activityBar.background": "#37dd2e",
+            "activityBar.foreground": "#15202b",
+            "activityBar.inactiveForeground": "#15202b99",
+            "activityBarBadge.background": "#5b62e4",
+            "activityBarBadge.foreground": "#e7e7e7",
+            "commandCenter.border": "#e7e7e799",
+            "sash.hoverBorder": "#37dd2e",
+            "statusBar.background": "#26ba1e",
+            "statusBar.foreground": "#e7e7e7",
+            "statusBarItem.hoverBackground": "#37dd2e",
+            "statusBarItem.remoteBackground": "#26ba1e",
+            "statusBarItem.remoteForeground": "#e7e7e7",
+            "titleBar.activeBackground": "#26ba1e",
+            "titleBar.activeForeground": "#e7e7e7",
+            "titleBar.inactiveBackground": "#26ba1e99",
+            "titleBar.inactiveForeground": "#e7e7e799"
+        },
+        "peacock.color": "#26BA1E"
+    },
+}
