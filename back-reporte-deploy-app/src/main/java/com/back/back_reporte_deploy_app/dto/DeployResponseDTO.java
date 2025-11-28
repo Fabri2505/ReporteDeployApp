@@ -11,9 +11,8 @@ import lombok.NoArgsConstructor;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class ProyectoResponseDTO {
-    
-    private Long id;
-    private String nombre;
-    private List<DeployResponseDTO> deploys;
+public class DeployResponseDTO {
+    private String version;
+    private String fechaDeploy;
+    private List<ResponsablesDeployDTO> responsables;
 }

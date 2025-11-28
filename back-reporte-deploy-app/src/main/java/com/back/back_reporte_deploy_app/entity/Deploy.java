@@ -18,11 +18,17 @@ import jakarta.persistence.InheritanceType;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToMany;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
+import lombok.experimental.SuperBuilder;
 
 @Data
 @Entity
 @Inheritance(strategy = InheritanceType.JOINED)
+@SuperBuilder
+@NoArgsConstructor
+@AllArgsConstructor
 public class Deploy {
     
     @Id

@@ -1,19 +1,18 @@
 package com.back.back_reporte_deploy_app.dto;
 
-import java.util.List;
+import java.time.LocalDateTime;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
-import lombok.Getter;
+import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@Getter
+@Data
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class ProyectoResponseDTO {
-    
-    private Long id;
-    private String nombre;
-    private List<DeployResponseDTO> deploys;
+public class ProyectoCreateDTO {
+    private String nombre; 
+    private String descripcion;
+    private LocalDateTime fechaCreacion;
 }

@@ -4,7 +4,9 @@ import java.util.List;
 
 import org.springframework.stereotype.Service;
 
+import com.back.back_reporte_deploy_app.dto.ProyectoCreateDTO;
 import com.back.back_reporte_deploy_app.dto.ProyectoResponseDTO;
+import com.back.back_reporte_deploy_app.entity.Proyecto;
 import com.back.back_reporte_deploy_app.repository.ProyectoRepository;
 
 import lombok.RequiredArgsConstructor;
@@ -21,6 +23,17 @@ public class ProyectoService {
             .nombre(proyecto.getNombre())
             .build()).toList();
             
+    }
+
+    public ProyectoResponseDTO createProyecto(ProyectoCreateDTO proyectoDTO) { 
+
+        Proyecto newProyecto = proyectoRepository.save(
+            Proyecto.builder().nombre(proyectoDTO.getNombre()).build());
+
+        return ProyectoResponseDTO.builder()
+            .id(newProyecto.getId())
+            .nombre(newProyecto.getNombre())
+            .build();
     }
 
 }
