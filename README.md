@@ -17,8 +17,10 @@ l proyecto sigue una arquitectura de **capas (Controller, Service, Repository)**
 | **Persistencia** | Spring Data JPA / Hibernate | Mapeo Objeto-Relacional (ORM) |
 | **Base de Datos** | MySQL | Almacenamiento de datos relacional |
 | **Build Tool** | Maven | Gestión de dependencias y compilación |
-| **FrontEnd** | Angular 18 | Presentación del proyecto |
+| **FrontEnd** | Angular 19 | Presentación del proyecto |
 ---
 
 Modelo fisico de la BD usada
 ![Diagrama Entidad-Relación del Sistema de Reportes de Despliegues](MODELO-BD-MYSQL.png)
+
+Se instala la libreria de PrimeNG version 19 ademas de TailwindCSS v4 para un diseño UI/UX mejorado
