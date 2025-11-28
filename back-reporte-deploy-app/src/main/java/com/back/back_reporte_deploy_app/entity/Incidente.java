@@ -1,6 +1,11 @@
 package com.back.back_reporte_deploy_app.entity;
 
+import com.back.back_reporte_deploy_app.enums.NivelIncidencia;
+
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -23,6 +28,12 @@ public class Incidente {
 
     private String descripcion;
     private String resolucion;
+
+    @Enumerated(EnumType.STRING)
+    @Column(length = 10)
+    private NivelIncidencia nivelIncidencia;
+
+    private Integer tiempoResolucionMinutos;
 
     @ManyToOne
     @JoinColumn(name = "id_feature")

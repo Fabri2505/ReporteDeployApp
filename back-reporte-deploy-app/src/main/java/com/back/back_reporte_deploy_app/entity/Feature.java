@@ -2,7 +2,12 @@ package com.back.back_reporte_deploy_app.entity;
 
 import java.util.List;
 
+import com.back.back_reporte_deploy_app.enums.NivelRiesgo;
+
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToMany;
@@ -20,7 +25,10 @@ import lombok.experimental.SuperBuilder;
 @AllArgsConstructor
 public class Feature extends Deploy{
     
-    private String nivelRiesgo;
+    @Enumerated(EnumType.STRING)
+    @Column(length = 10)
+    private NivelRiesgo nivelRiesgo;
+    
     private Integer downTime;
     private Integer tiempoIncidencia;
 
