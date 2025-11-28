@@ -23,4 +23,5 @@ public class DeployCreateDTO {
     private DeployFeatureCreateDTO feature;
     private List<Long> idResponsables;
     private Long idProcesoDespliegue;
+    private Long idRollback;
 }

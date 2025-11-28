@@ -36,4 +36,8 @@ public class ProyectoService {
             .build();
     }
 
+    public Proyecto getProyectoById(Long idProyecto) {
+        return proyectoRepository.findById(idProyecto).orElseThrow(() -> new RuntimeException("Proyecto no encontrado"));
+    }
+
 }
