@@ -28,7 +28,11 @@ public class ProyectoService {
     public ProyectoResponseDTO createProyecto(ProyectoCreateDTO proyectoDTO) { 
 
         Proyecto newProyecto = proyectoRepository.save(
-            Proyecto.builder().nombre(proyectoDTO.getNombre()).build());
+            Proyecto.builder()
+                .nombre(proyectoDTO.getNombre())
+                .descripcion(proyectoDTO.getDescripcion())
+                .fechaCreacion(proyectoDTO.getFechaCreacion())
+                .build());
 
         return ProyectoResponseDTO.builder()
             .id(newProyecto.getId())

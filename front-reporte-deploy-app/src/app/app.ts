@@ -1,12 +1,12 @@
 import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { ButtonModule } from 'primeng/button';
-import { Dialog } from 'primeng/dialog';
 import { InputTextModule } from 'primeng/inputtext';
+import { CardModule } from 'primeng/card';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Dialog, ButtonModule, InputTextModule],
+  imports: [RouterOutlet, ButtonModule, InputTextModule, CardModule],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
@@ -16,7 +16,7 @@ export class App {
   visible: boolean = false;
 
   showDialog() {
-      this.visible = true;
+    this.visible = true;
   }
 
 }
