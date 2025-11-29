@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { LayoutMainComponent } from './layout-main.component';
+import { NotFound } from './not-found';
 
-describe('LayoutMainComponent', () => {
-  let component: LayoutMainComponent;
-  let fixture: ComponentFixture<LayoutMainComponent>;
+describe('NotFound', () => {
+  let component: NotFound;
+  let fixture: ComponentFixture<NotFound>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [LayoutMainComponent]
+      imports: [NotFound]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(LayoutMainComponent);
+    fixture = TestBed.createComponent(NotFound);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
