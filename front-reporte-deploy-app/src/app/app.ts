@@ -4,11 +4,13 @@ import { HlmButtonImports } from '@spartan-ng/helm/button';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, HlmButtonImports],
+  imports: [
+    RouterOutlet, 
+    HlmButtonImports
+  ],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
 export class App {
   protected readonly title = signal('front-reporte-deploy-app');
-
 }
