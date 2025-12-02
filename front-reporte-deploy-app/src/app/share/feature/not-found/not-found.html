@@ -22,14 +22,10 @@
   
       <!-- Actions -->
       <div class="flex gap-4 justify-center">
-        <button 
-          routerLink="/"
-          class="px-6 py-3 bg-primary text-primary-foreground hover:bg-primary/90 font-medium rounded-lg transition-colors">
+        <button hlmBtn routerLink="/" class="px-7 py-6 text-md">
           Ir al inicio
         </button>
-        <button 
-          (click)="goBack()"
-          class="px-6 py-3 bg-secondary text-secondary-foreground hover:bg-secondary/80 font-medium rounded-lg transition-colors">
+        <button hlmBtn variant="secondary" (click)="goBack()" class="px-7 py-6 text-md">
           Volver atrás
         </button>
       </div>

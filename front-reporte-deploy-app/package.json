@@ -29,6 +29,8 @@
     "@angular/forms": "^20.3.0",
     "@angular/platform-browser": "^20.3.0",
     "@angular/router": "^20.3.0",
+    "@ng-icons/core": "31.0.0",
+    "@ng-icons/lucide": ">=32.0.0 <34.0.0",
     "@spartan-ng/brain": "^0.0.1-alpha.570",
     "@tailwindcss/postcss": "^4.1.17",
     "class-variance-authority": "^0.7.0",
