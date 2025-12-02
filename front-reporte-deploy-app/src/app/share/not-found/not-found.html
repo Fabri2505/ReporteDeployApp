@@ -1,1 +1,37 @@
-<p>not-found works!</p>
+<div class="min-h-screen bg-background flex items-center justify-center px-4">
+  <div class="text-center">
+    <!-- Error Code -->
+    <div class="flex items-center justify-center gap-4 mb-8">
+      <span class="text-9xl font-bold text-foreground">4</span>
+      
+      <!-- Document Icon Space -->
+      <div class="w-24 h-24 flex items-center justify-center">
+        <img src="img/reporte-de-error.png" alt="">
+      </div>
+      
+      <span class="text-9xl font-bold text-foreground">4</span>
+    </div>
+
+    <!-- Message -->
+    <h1 class="text-3xl font-bold text-foreground mb-4">
+      Página no encontrada
+    </h1>
+    <p class="text-muted-foreground mb-8 max-w-md mx-auto">
+      El reporte que buscas no existe o ha sido movido. Verifica la URL o regresa al inicio.
+    </p>
+
+    <!-- Actions -->
+    <div class="flex gap-4 justify-center">
+      <button 
+        routerLink="/"
+        class="px-6 py-3 bg-primary text-primary-foreground hover:bg-primary/90 font-medium rounded-lg transition-colors">
+        Ir al inicio
+      </button>
+      <button 
+        (click)="goBack()"
+        class="px-6 py-3 bg-secondary text-secondary-foreground hover:bg-secondary/80 font-medium rounded-lg transition-colors">
+        Volver atrás
+      </button>
+    </div>
+  </div>
+</div>
