@@ -3,6 +3,10 @@
 @import 'tailwindcss/preflight.css' layer(base);
 @import 'tailwindcss/utilities.css';
 
+@theme {
+  --color-surface: light-dark(white, rgb(31 41 55)); /* gray-800 */
+}
+
 @import "@angular/cdk/overlay-prebuilt.css";
 
 @import "@spartan-ng/brain/hlm-tailwind-preset.css";
