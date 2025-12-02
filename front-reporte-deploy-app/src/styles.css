@@ -4,6 +4,10 @@
 @import 'tailwindcss/utilities.css';
 @custom-variant dark (&:where(.dark, .dark *));
 
+@theme {
+  --color-surface: light-dark(white, rgb(31 41 55)); /* gray-800 */
+}
+
 @import "@angular/cdk/overlay-prebuilt.css";
 
 @import "@spartan-ng/brain/hlm-tailwind-preset.css";
