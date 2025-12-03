@@ -4,12 +4,7 @@ import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.List;
 
-import com.back.back_reporte_deploy_app.enums.TipoDeploy;
-
-import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
-import jakarta.persistence.EnumType;
-import jakarta.persistence.Enumerated;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -36,8 +31,8 @@ public class Deploy {
     private Long id;
     private String version;
 
-    @Enumerated(EnumType.STRING)
-    @Column(length = 10)
+    @ManyToOne
+    @JoinColumn(name = "id_tipo_deploy")
     private TipoDeploy tipo;
 
     private LocalDate fecha;

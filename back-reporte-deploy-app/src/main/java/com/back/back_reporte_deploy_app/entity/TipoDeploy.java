@@ -2,12 +2,7 @@ package com.back.back_reporte_deploy_app.entity;
 
 import java.util.List;
 
-import com.back.back_reporte_deploy_app.enums.TipoValidacion;
-
-import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
-import jakarta.persistence.EnumType;
-import jakarta.persistence.Enumerated;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -20,23 +15,21 @@ import lombok.NoArgsConstructor;
 @Data
 @Entity
 @Builder
-@NoArgsConstructor
 @AllArgsConstructor
-public class Validacion {
+@NoArgsConstructor
+public class TipoDeploy {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     private String nom;
-    
-    @Enumerated(EnumType.STRING)
-    @Column(length = 20)
-    private TipoValidacion tipo;
 
-    @OneToMany(mappedBy = "validacion")
-    private List<DetValidacion> detValidaciones;
+    @OneToMany(mappedBy = "tipo")
+    private List<Deploy> deploys;
 
-    @OneToMany(mappedBy = "validacion")
+    @OneToMany(mappedBy = "tipo")
+    private List<ProcesoDeploy> procesodeploys;
+
+    @OneToMany(mappedBy = "tipo")
     private List<DetValidacionTipoDeploy> detValidTipoDeploys;
-    
 }

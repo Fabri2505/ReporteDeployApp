@@ -30,6 +30,7 @@ public class DeployService {
     private final ProcesoDeployService procesoDeployService;
     private final PlanRollBackService planRollBackService;
     private final DetDeployRepository detDeployRepository;
+    private final TipoDeployService tipoDeployService;
 
     public DeployResponseDTO registerDeploy(DeployCreateDTO deployCreateDTO) {
 
@@ -100,7 +101,7 @@ public class DeployService {
             .fecha(deployCreateDTO.getFechaDeploy().toLocalDate())
             .horaIni(deployCreateDTO.getFechaDeploy().toLocalTime())
             .sprint(deployCreateDTO.getSprint())
-            .tipo(deployCreateDTO.getTipoDeploy())
+            .tipo(tipoDeployService.getTipoDeployForId(deployCreateDTO.getIdTipoDeploy()))
             .proyecto(proyecto)
             .build();
     }

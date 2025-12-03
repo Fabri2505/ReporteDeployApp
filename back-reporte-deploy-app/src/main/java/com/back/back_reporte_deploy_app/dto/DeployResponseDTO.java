@@ -3,7 +3,7 @@ package com.back.back_reporte_deploy_app.dto;
 import java.time.LocalDateTime;
 import java.util.List;
 
-import com.back.back_reporte_deploy_app.enums.TipoDeploy;
+import com.back.back_reporte_deploy_app.entity.TipoDeploy;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
