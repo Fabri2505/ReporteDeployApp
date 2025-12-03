@@ -1,19 +1,98 @@
 <div hlmSidebarWrapper>
   <hlm-sidebar>
-  <div hlmSidebarHeader class="border-b-2">
-    <div class="flex">
-      <lucide-icon [img]="rocket" class="bg-blue-600 m-2 rounded-[5px]"></lucide-icon>
-      <div class="flex flex-col justify-center ml-2 text-sm font-medium">
-        <div>RepDep</div>
-        <div>Reporteria</div>  
-      </div>    
+    <div hlmSidebarHeader class="border-b-2">
+      <div class="flex">
+        <lucide-icon [img]="rocket" class="bg-blue-600 m-2 rounded-[5px]"></lucide-icon>
+        <div class="flex flex-col justify-center ml-2 text-sm font-medium">
+          <div>RepDep</div>
+          <div>Reporteria</div>  
+        </div>    
+      </div>
+      <button hlmBtn class="bg-blue-500 p-1 rounded-[10px]">+ Nuevo Despliegue</button>
     </div>
-  </div>
-  <div hlmSidebarContent>
-    <div hlmSidebarGroup></div>
-    <div hlmSidebarGroup></div>
-  </div>
-  <div hlmSidebarFooter></div>
+    <div hlmSidebarContent>
+      <div hlmSidebarGroup>
+        <div hlmSidebarGroupLabel>NAVEGACION</div>
+        <div hlmSidebarGroupContent>
+          <ul hlmSidebarMenu> 
+            @for (item of _itemsNav; track $index) {
+              <li hlmSidebarMenuItem>
+                <a hlmSidebarMenuButton>
+                  <lucide-icon [size]="20" [img]="item.icon" />
+                  <span>{{ item.title }}</span>
+                </a>
+              </li>
+            }
+          </ul>
+        </div>
+      </div>
+      <div hlmSidebarGroup>
+        <div hlmSidebarGroupLabel>FILTRAR POR TIPO</div>
+        <div hlmSidebarGroupContent>
+          <ul hlmSidebarMenu>
+            <li hlmSidebarMenuItem>
+              <a hlmSidebarMenuButton>
+                <span>Todos</span>
+              </a>
+            </li>
+            <li hlmSidebarMenuItem>
+              <a hlmSidebarMenuButton>
+                <div class="w-2 h-2 bg-red-600 rounded-2xl"></div>
+                <span>Mayor</span>
+              </a>
+            </li>
+            <li hlmSidebarMenuItem>
+              <a hlmSidebarMenuButton>
+                <div class="w-2 h-2 bg-yellow-500 rounded-2xl"></div>
+                <span>Menor</span>
+              </a>
+            </li>
+            <li hlmSidebarMenuItem>
+              <a hlmSidebarMenuButton>
+                <div class="w-2 h-2 bg-green-600 rounded-2xl"></div>
+                <span>Patch</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div hlmSidebarGroup>
+        <div hlmSidebarGroupContent>
+          <ul hlmSidebarMenu>
+              @for (item of _itemsProject; track item.title) {
+                  <hlm-collapsible [expanded]="item.defaultOpen" class="group/collapsible">
+                      <li hlmSidebarMenuItem>
+                          <button
+                              hlmCollapsibleTrigger
+                              hlmSidebarMenuButton
+                              class="flex w-full items-center"
+                          >
+                          <div class="flex w-full items-center gap-2">
+                            <lucide-angular [size]="20" [img]="folderOpen" ></lucide-angular> 
+                              <span>{{ item.title }}</span>
+                          </div>
+                              <lucide-angular [size]="20" [img]="flecha" ></lucide-angular>
+                          </button>
+                          <hlm-collapsible-content>
+                              <ul hlmSidebarMenuSub>
+                                  @for (subItem of item.items; track subItem.title) {
+                                      <li hlmSidebarMenuSubItem>
+                                          <button hlmSidebarMenuSubButton class="w-full">
+                                              <span>{{ subItem.title }}</span>
+                                          </button>
+                                      </li>
+                                  }
+                              </ul>
+                          </hlm-collapsible-content>
+                      </li>
+                  </hlm-collapsible>
+              }
+          </ul>
+      </div>
+      </div>
+    </div>
+    <div hlmSidebarFooter></div>
   </hlm-sidebar>
   <ng-content />
 </div>

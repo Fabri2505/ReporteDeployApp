@@ -1,13 +1,16 @@
 import { Routes } from '@angular/router';
+import { MainLayout } from './share/ui/main-layout/main-layout';
 
 export const routes: Routes = [
     {
         path: '',
-        loadChildren: () => import('./report/reporte.routes').then(m => m.routes)
-    },
-    {
-        path: 'prueba',
-        loadComponent: () => import('./share/ui/main-layout/main-layout').then(m => m.MainLayout)
+        component: MainLayout,
+        children:[
+            {
+                path:'reporte',
+                loadChildren: () => import('./report/reporte.routes').then(m => m.routes)
+            }
+        ]
     },
     {
         path: 'not-found',

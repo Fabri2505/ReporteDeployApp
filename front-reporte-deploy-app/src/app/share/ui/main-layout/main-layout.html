@@ -1,5 +1,8 @@
 <app-side-bar>
-    <main>
-      <button hlmSidebarTrigger><span class="sr-only"></span></button>
+    <main hlmSidebarInset class=" flex justify-between">
+      <header class="flex h-12 items-center px-4">
+        <button hlmSidebarTrigger><span class="sr-only"></span></button>
+        <router-outlet/>
+      </header>
     </main>
 </app-side-bar>
