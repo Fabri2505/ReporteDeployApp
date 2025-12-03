@@ -1,1 +1,19 @@
-<p>side-bar works!</p>
+<div hlmSidebarWrapper>
+  <hlm-sidebar>
+  <div hlmSidebarHeader class="border-b-2">
+    <div class="flex">
+      <lucide-icon [img]="rocket" class="bg-blue-600 m-2 rounded-[5px]"></lucide-icon>
+      <div class="flex flex-col justify-center ml-2 text-sm font-medium">
+        <div>RepDep</div>
+        <div>Reporteria</div>  
+      </div>    
+    </div>
+  </div>
+  <div hlmSidebarContent>
+    <div hlmSidebarGroup></div>
+    <div hlmSidebarGroup></div>
+  </div>
+  <div hlmSidebarFooter></div>
+  </hlm-sidebar>
+  <ng-content />
+</div>
