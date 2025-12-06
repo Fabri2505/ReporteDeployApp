@@ -16,6 +16,7 @@ import com.back.back_reporte_deploy_app.entity.PasoDeploy;
 import com.back.back_reporte_deploy_app.entity.PlanRollback;
 import com.back.back_reporte_deploy_app.entity.Proyecto;
 import com.back.back_reporte_deploy_app.entity.Responsable;
+import com.back.back_reporte_deploy_app.entity.Validacion;
 import com.back.back_reporte_deploy_app.repository.DeployRepository;
 import com.back.back_reporte_deploy_app.repository.DetDeployRepository;
 
@@ -31,6 +32,7 @@ public class DeployService {
     private final PlanRollBackService planRollBackService;
     private final DetDeployRepository detDeployRepository;
     private final TipoDeployService tipoDeployService;
+    private final ValidacionService validacionService;
 
     public DeployResponseDTO registerDeploy(DeployCreateDTO deployCreateDTO) {
 
@@ -67,6 +69,10 @@ public class DeployService {
             ((Feature)newDeploy).setDetDeploys(detDeploys);
             
         }
+
+        List<Validacion> valids = validacionService.getValidacionForTipoDeploy(newDeploy.getTipo().getId());
+
+        validacionService.insertDetalleValidacion(newDeploy, valids);
         
         return DeployResponseDTO.builder()
                 .version(newDeploy.getVersion())
@@ -104,5 +110,9 @@ public class DeployService {
             .tipo(tipoDeployService.getTipoDeployForId(deployCreateDTO.getIdTipoDeploy()))
             .proyecto(proyecto)
             .build();
+    }
+
+    public Deploy getDeployForId(Long idDeploy){
+        return deployRepository.findById(idDeploy).orElseThrow(() -> new RuntimeException("TipoDeploy no encontrado"));
     }
 }

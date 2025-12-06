@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 
 
+
 @RestController
 @RequestMapping("/api/validacion")
 @RequiredArgsConstructor
@@ -21,10 +22,12 @@ public class ValidacionController {
 
     private final ValidacionService validacionService;
 
-    @GetMapping("/{idTipoDeploy}")
+    @GetMapping("/tipo/{idTipoDeploy}")
     public List<ValidacionResponseDTO> getValidacionesForTipo(@PathVariable Long idTipoDeploy) {
-        return validacionService.getValidacionForTipoDeploy(idTipoDeploy);
+
+        return validacionService.mapperValidacionesToResponse(
+            validacionService.getValidacionForTipoDeploy(idTipoDeploy)
+        );
     }
     
-
 }

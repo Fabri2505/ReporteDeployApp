@@ -10,4 +10,5 @@ import com.back.back_reporte_deploy_app.entity.Validacion;
 @Repository
 public interface ValidacionRepository extends JpaRepository<Validacion, Long>{
     public List<Validacion> findByDetValidTipoDeploysTipoId(Long id);
+    public List<Validacion> findByIdIn(List<Long> ids);
 }
