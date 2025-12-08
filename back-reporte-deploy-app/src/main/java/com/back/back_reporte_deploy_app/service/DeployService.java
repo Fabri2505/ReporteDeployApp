@@ -8,9 +8,12 @@ import org.springframework.stereotype.Service;
 import com.back.back_reporte_deploy_app.dto.DeployCreateDTO;
 import com.back.back_reporte_deploy_app.dto.DeployResponseDTO;
 import com.back.back_reporte_deploy_app.dto.ResponsablesDeployDTO;
+import com.back.back_reporte_deploy_app.dto.ValidacionDeployResponseDTO;
 import com.back.back_reporte_deploy_app.entity.Deploy;
 import com.back.back_reporte_deploy_app.entity.DetDeploy;
+import com.back.back_reporte_deploy_app.entity.DetDeployId;
 import com.back.back_reporte_deploy_app.entity.DetRespDeploy;
+import com.back.back_reporte_deploy_app.entity.DetRespDeployId;
 import com.back.back_reporte_deploy_app.entity.Feature;
 import com.back.back_reporte_deploy_app.entity.PasoDeploy;
 import com.back.back_reporte_deploy_app.entity.PlanRollback;
@@ -20,10 +23,12 @@ import com.back.back_reporte_deploy_app.entity.Validacion;
 import com.back.back_reporte_deploy_app.repository.DeployRepository;
 import com.back.back_reporte_deploy_app.repository.DetDeployRepository;
 
+import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 
 @Service
 @RequiredArgsConstructor
+@Transactional
 public class DeployService {
     private final DeployRepository deployRepository;
     private final ProyectoService proyectoService;
@@ -44,7 +49,14 @@ public class DeployService {
         
         List<DetRespDeploy> detRespDeploys = new ArrayList<>();
         for (Responsable responsable : responsables) {    
+
+            DetRespDeployId id = DetRespDeployId.builder()
+                .responsable(responsable.getId())
+                .deploy(newDeploy.getId())
+                .build();
+
             detRespDeploys.add(DetRespDeploy.builder()
+                .id(id)
                 .deploy(newDeploy)
                 .responsable(responsable)
                 .build());
@@ -58,7 +70,14 @@ public class DeployService {
             List<DetDeploy> detDeploys = new ArrayList<>();
             List<PasoDeploy> pasosDeploy = procesoDeployService.getPasosDeploysForIdProceDeploy(deployCreateDTO.getIdProcesoDespliegue());
             for (PasoDeploy pasoDeploy : pasosDeploy) {
+
+                DetDeployId id = DetDeployId.builder()
+                    .pasoDeploy(pasoDeploy.getId())
+                    .feature(newDeploy.getId())
+                    .build();
+
                 detDeploys.add(DetDeploy.builder()
+                    .id(id)
                     .feature((Feature)newDeploy)
                     .pasoDeploy(pasoDeploy)
                     .build()
@@ -78,7 +97,7 @@ public class DeployService {
                 .version(newDeploy.getVersion())
                 .id(newDeploy.getId())
                 .fechaRegistro(newDeploy.getFecha().atTime(newDeploy.getHoraIni()))
-                .tipoDeploy(newDeploy.getTipo())
+                .tipoDeploy(newDeploy.getTipo().getNom())
                 .responsables(responsables.stream().map(responsable -> 
                     ResponsablesDeployDTO.builder()
                         .id(responsable.getId())
@@ -114,5 +133,16 @@ public class DeployService {
 
     public Deploy getDeployForId(Long idDeploy){
         return deployRepository.findById(idDeploy).orElseThrow(() -> new RuntimeException("TipoDeploy no encontrado"));
+    }
+
+    public List<ValidacionDeployResponseDTO> getValidaciones(Long idDeploy){
+        return validacionService.getDetValidacionForDeploy(idDeploy)
+            .stream().map(detValid -> ValidacionDeployResponseDTO
+                .builder()
+                .id(detValid.getId())
+                .hecho(detValid.getHecho())
+                .comentario(detValid.getComentario())
+                .nomValidacion(detValid.getValidacion().getNom())
+                .build()).toList();
     }
 }

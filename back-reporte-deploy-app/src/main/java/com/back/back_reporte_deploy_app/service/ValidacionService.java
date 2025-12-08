@@ -49,4 +49,9 @@ public class ValidacionService {
 
         return listDetValidacion;
     }
+
+    public List<DetValidacion> getDetValidacionForDeploy(Long idDeploy){
+        return detValidacionRepository.findByDeployId(idDeploy);
+    }
+
 }
