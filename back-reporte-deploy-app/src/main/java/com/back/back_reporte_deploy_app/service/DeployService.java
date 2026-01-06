@@ -7,6 +7,8 @@ import org.springframework.stereotype.Service;
 
 import com.back.back_reporte_deploy_app.dto.CambioCreateDTO;
 import com.back.back_reporte_deploy_app.dto.CambioResponseDTO;
+import com.back.back_reporte_deploy_app.dto.ComponenteDeployCreateDTO;
+import com.back.back_reporte_deploy_app.dto.ComponenteDeployResponseDTO;
 import com.back.back_reporte_deploy_app.dto.DeployCreateDTO;
 import com.back.back_reporte_deploy_app.dto.DeployResponseDTO;
 import com.back.back_reporte_deploy_app.dto.NewFuncionalidadCreateDTO;
@@ -44,6 +46,7 @@ public class DeployService {
     private final ValidacionService validacionService;
     private final CambioService cambioService;
     private final NewFuncionalidadService newFuncionalidadService;
+    private final ComponenteDeployService componenteDeployService;
 
 
     public DeployResponseDTO registerDeploy(DeployCreateDTO deployCreateDTO) {
@@ -178,6 +181,14 @@ public class DeployService {
         
         var feature = this.getFeatureFromId(idDeploy);
         return newFuncionalidadService.crearFuncionalidades(funcionalidades, feature);
+    }
+
+    public List<ComponenteDeployResponseDTO> asignarComponentes(
+            Long idDeploy, 
+            List<ComponenteDeployCreateDTO> componentes) {
+        
+        var feature = this.getFeatureFromId(idDeploy);
+        return componenteDeployService.crearComponentes(componentes, feature);
     }
 
 }

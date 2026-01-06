@@ -5,6 +5,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.back.back_reporte_deploy_app.dto.CambioCreateDTO;
 import com.back.back_reporte_deploy_app.dto.CambioResponseDTO;
+import com.back.back_reporte_deploy_app.dto.ComponenteDeployCreateDTO;
+import com.back.back_reporte_deploy_app.dto.ComponenteDeployResponseDTO;
 import com.back.back_reporte_deploy_app.dto.DeployCreateDTO;
 import com.back.back_reporte_deploy_app.dto.DeployResponseDTO;
 import com.back.back_reporte_deploy_app.dto.NewFuncionalidadCreateDTO;
@@ -66,10 +68,11 @@ public class DeployController {
 
     
     @PostMapping("/{idDeploy}/componentes")
-    public String asignarComponentesDeplegados(@PathVariable Long idDeploy) {
+    public ResponseEntity<List<ComponenteDeployResponseDTO>> asignarComponentesDesplegados(@PathVariable Long idDeploy, @RequestBody @Valid List<ComponenteDeployCreateDTO> componentes) {
         
-        return null;
+        var response = deployService.asignarComponentes(idDeploy, componentes);
+        
+        return ResponseEntity.status(HttpStatus.CREATED).body(response);
     }
-    
     
 }
