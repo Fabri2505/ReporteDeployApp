@@ -3,6 +3,8 @@ package com.back.back_reporte_deploy_app.controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.back.back_reporte_deploy_app.dto.CambioCreateDTO;
+import com.back.back_reporte_deploy_app.dto.CambioResponseDTO;
 import com.back.back_reporte_deploy_app.dto.DeployCreateDTO;
 import com.back.back_reporte_deploy_app.dto.DeployResponseDTO;
 import com.back.back_reporte_deploy_app.dto.ValidacionDeployResponseDTO;
@@ -41,6 +43,14 @@ public class DeployController {
         List<ValidacionDeployResponseDTO> validaciones = deployService.getValidaciones(idDeploy);
 
         return ResponseEntity.ok(validaciones);
+    }
+    
+    @PostMapping("/cambios/{idDeploy}")
+    public ResponseEntity<List<CambioResponseDTO>> asignarCambiosRealizados(@PathVariable Long idDeploy, @RequestBody List<CambioCreateDTO> cambios) {
+        
+        var cambiosResponse = deployService.asignarCambios(idDeploy, cambios);
+
+        return ResponseEntity.status(HttpStatus.CREATED).body(cambiosResponse);
     }
     
     

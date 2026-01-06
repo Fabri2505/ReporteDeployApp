@@ -1,6 +1,6 @@
 package com.back.back_reporte_deploy_app.dto;
 
-import java.util.List;
+import com.back.back_reporte_deploy_app.enums.TipoCambio;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -9,11 +9,11 @@ import lombok.NoArgsConstructor;
 
 @Data
 @Builder
-@NoArgsConstructor
 @AllArgsConstructor
-public class ProyectoResponseDTO {
-    
+@NoArgsConstructor
+public class CambioResponseDTO {
     private Long id;
-    private String nombre;
-    private List<DeployResponseDTO> deploys;
+    private String descrip;
+    private TipoCambio tipo;
+    private Long idFeature;
 }

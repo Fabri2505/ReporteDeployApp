@@ -5,6 +5,8 @@ import java.util.List;
 
 import org.springframework.stereotype.Service;
 
+import com.back.back_reporte_deploy_app.dto.CambioCreateDTO;
+import com.back.back_reporte_deploy_app.dto.CambioResponseDTO;
 import com.back.back_reporte_deploy_app.dto.DeployCreateDTO;
 import com.back.back_reporte_deploy_app.dto.DeployResponseDTO;
 import com.back.back_reporte_deploy_app.dto.ResponsablesDeployDTO;
@@ -38,6 +40,7 @@ public class DeployService {
     private final DetDeployRepository detDeployRepository;
     private final TipoDeployService tipoDeployService;
     private final ValidacionService validacionService;
+    private final CambioService cambioService;
 
     public DeployResponseDTO registerDeploy(DeployCreateDTO deployCreateDTO) {
 
@@ -144,5 +147,19 @@ public class DeployService {
                 .comentario(detValid.getComentario())
                 .nomValidacion(detValid.getValidacion().getNom())
                 .build()).toList();
+    }
+
+    public List<CambioResponseDTO> asignarCambios(Long idDeploy, List<CambioCreateDTO> cambios) {
+        // Lógica para asignar los cambios realizados al despliegue
+
+        Deploy deploy = this.getDeployForId(idDeploy);
+        if (deploy == null) {
+            throw new RuntimeException("Deploy no encontrado con ID: " + idDeploy);
+        }
+        if (deploy instanceof Feature == false) {
+            throw new RuntimeException("El Deploy con ID: " + idDeploy + " no es de tipo Feature");
+        }
+
+        return cambioService.crearCambios(cambios, (Feature)deploy);
     }
 }
