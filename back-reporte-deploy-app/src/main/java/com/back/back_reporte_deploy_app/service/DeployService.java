@@ -11,6 +11,8 @@ import com.back.back_reporte_deploy_app.dto.ComponenteDeployCreateDTO;
 import com.back.back_reporte_deploy_app.dto.ComponenteDeployResponseDTO;
 import com.back.back_reporte_deploy_app.dto.DeployCreateDTO;
 import com.back.back_reporte_deploy_app.dto.DeployResponseDTO;
+import com.back.back_reporte_deploy_app.dto.IncidenteCreateDTO;
+import com.back.back_reporte_deploy_app.dto.IncidenteResponseDTO;
 import com.back.back_reporte_deploy_app.dto.NewFuncionalidadCreateDTO;
 import com.back.back_reporte_deploy_app.dto.NewFuncionalidadResponseDTO;
 import com.back.back_reporte_deploy_app.dto.ResponsablesDeployDTO;
@@ -47,6 +49,7 @@ public class DeployService {
     private final CambioService cambioService;
     private final NewFuncionalidadService newFuncionalidadService;
     private final ComponenteDeployService componenteDeployService;
+    private final IncidenteService incidenteService;
 
 
     public DeployResponseDTO registerDeploy(DeployCreateDTO deployCreateDTO) {
@@ -175,20 +178,22 @@ public class DeployService {
         return cambioService.crearCambios(cambios, feature);
     }
 
-    public List<NewFuncionalidadResponseDTO> asignarFuncionalidades(
-            Long idDeploy, 
-            List<NewFuncionalidadCreateDTO> funcionalidades) {
+    public List<NewFuncionalidadResponseDTO> asignarFuncionalidades(Long idDeploy, List<NewFuncionalidadCreateDTO> funcionalidades) {
         
         var feature = this.getFeatureFromId(idDeploy);
         return newFuncionalidadService.crearFuncionalidades(funcionalidades, feature);
     }
 
-    public List<ComponenteDeployResponseDTO> asignarComponentes(
-            Long idDeploy, 
-            List<ComponenteDeployCreateDTO> componentes) {
+    public List<ComponenteDeployResponseDTO> asignarComponentes(Long idDeploy, List<ComponenteDeployCreateDTO> componentes) {
         
         var feature = this.getFeatureFromId(idDeploy);
         return componenteDeployService.crearComponentes(componentes, feature);
+    }
+
+    public List<IncidenteResponseDTO> asignarIncidentes(Long idDeploy, List<IncidenteCreateDTO> incidentes) {
+        
+        var feature = this.getFeatureFromId(idDeploy);
+        return incidenteService.crearIncidentes(incidentes, feature);
     }
 
 }

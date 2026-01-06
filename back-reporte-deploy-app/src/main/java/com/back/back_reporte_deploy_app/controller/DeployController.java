@@ -9,6 +9,8 @@ import com.back.back_reporte_deploy_app.dto.ComponenteDeployCreateDTO;
 import com.back.back_reporte_deploy_app.dto.ComponenteDeployResponseDTO;
 import com.back.back_reporte_deploy_app.dto.DeployCreateDTO;
 import com.back.back_reporte_deploy_app.dto.DeployResponseDTO;
+import com.back.back_reporte_deploy_app.dto.IncidenteCreateDTO;
+import com.back.back_reporte_deploy_app.dto.IncidenteResponseDTO;
 import com.back.back_reporte_deploy_app.dto.NewFuncionalidadCreateDTO;
 import com.back.back_reporte_deploy_app.dto.NewFuncionalidadResponseDTO;
 import com.back.back_reporte_deploy_app.dto.ValidacionDeployResponseDTO;
@@ -71,6 +73,14 @@ public class DeployController {
     public ResponseEntity<List<ComponenteDeployResponseDTO>> asignarComponentesDesplegados(@PathVariable Long idDeploy, @RequestBody @Valid List<ComponenteDeployCreateDTO> componentes) {
         
         var response = deployService.asignarComponentes(idDeploy, componentes);
+        
+        return ResponseEntity.status(HttpStatus.CREATED).body(response);
+    }
+
+    @PostMapping("/{idDeploy}/incidentes")
+    public ResponseEntity<List<IncidenteResponseDTO>> asignarIncidentes(@PathVariable Long idDeploy, @RequestBody @Valid List<IncidenteCreateDTO> incidentes) {
+        
+        var response = deployService.asignarIncidentes(idDeploy, incidentes);
         
         return ResponseEntity.status(HttpStatus.CREATED).body(response);
     }
