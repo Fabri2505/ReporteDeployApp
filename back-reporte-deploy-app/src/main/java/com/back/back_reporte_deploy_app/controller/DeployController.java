@@ -7,9 +7,12 @@ import com.back.back_reporte_deploy_app.dto.CambioCreateDTO;
 import com.back.back_reporte_deploy_app.dto.CambioResponseDTO;
 import com.back.back_reporte_deploy_app.dto.DeployCreateDTO;
 import com.back.back_reporte_deploy_app.dto.DeployResponseDTO;
+import com.back.back_reporte_deploy_app.dto.NewFuncionalidadCreateDTO;
+import com.back.back_reporte_deploy_app.dto.NewFuncionalidadResponseDTO;
 import com.back.back_reporte_deploy_app.dto.ValidacionDeployResponseDTO;
 import com.back.back_reporte_deploy_app.service.DeployService;
 
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 
 import java.util.List;
@@ -37,7 +40,7 @@ public class DeployController {
         return ResponseEntity.status(HttpStatus.CREATED).body(deploy);
     }
 
-    @GetMapping("/validacion/{idDeploy}")
+    @GetMapping("/{idDeploy}/validacion")
     public ResponseEntity<List<ValidacionDeployResponseDTO>> getValidacionesForDeploy(@PathVariable Long idDeploy) {
 
         List<ValidacionDeployResponseDTO> validaciones = deployService.getValidaciones(idDeploy);
@@ -45,12 +48,27 @@ public class DeployController {
         return ResponseEntity.ok(validaciones);
     }
     
-    @PostMapping("/cambios/{idDeploy}")
+    @PostMapping("/{idDeploy}/cambios")
     public ResponseEntity<List<CambioResponseDTO>> asignarCambiosRealizados(@PathVariable Long idDeploy, @RequestBody List<CambioCreateDTO> cambios) {
         
         var cambiosResponse = deployService.asignarCambios(idDeploy, cambios);
 
         return ResponseEntity.status(HttpStatus.CREATED).body(cambiosResponse);
+    }
+
+    @PostMapping("/{idDeploy}/funcionalidades")
+    public ResponseEntity<List<NewFuncionalidadResponseDTO>> asignarFuncionalidadesNuevas(@PathVariable Long idDeploy, @RequestBody @Valid List<NewFuncionalidadCreateDTO> funcionalidades) {
+        
+        var response = deployService.asignarFuncionalidades(idDeploy, funcionalidades);
+        
+        return ResponseEntity.status(HttpStatus.CREATED).body(response);
+    }
+
+    
+    @PostMapping("/{idDeploy}/componentes")
+    public String asignarComponentesDeplegados(@PathVariable Long idDeploy) {
+        
+        return null;
     }
     
     

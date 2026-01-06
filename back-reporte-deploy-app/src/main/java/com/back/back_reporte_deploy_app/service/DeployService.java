@@ -9,6 +9,8 @@ import com.back.back_reporte_deploy_app.dto.CambioCreateDTO;
 import com.back.back_reporte_deploy_app.dto.CambioResponseDTO;
 import com.back.back_reporte_deploy_app.dto.DeployCreateDTO;
 import com.back.back_reporte_deploy_app.dto.DeployResponseDTO;
+import com.back.back_reporte_deploy_app.dto.NewFuncionalidadCreateDTO;
+import com.back.back_reporte_deploy_app.dto.NewFuncionalidadResponseDTO;
 import com.back.back_reporte_deploy_app.dto.ResponsablesDeployDTO;
 import com.back.back_reporte_deploy_app.dto.ValidacionDeployResponseDTO;
 import com.back.back_reporte_deploy_app.entity.Deploy;
@@ -41,6 +43,8 @@ public class DeployService {
     private final TipoDeployService tipoDeployService;
     private final ValidacionService validacionService;
     private final CambioService cambioService;
+    private final NewFuncionalidadService newFuncionalidadService;
+
 
     public DeployResponseDTO registerDeploy(DeployCreateDTO deployCreateDTO) {
 
@@ -111,6 +115,18 @@ public class DeployService {
                 .build();
     }
 
+    private Feature getFeatureFromId(Long idDeploy){
+        Deploy deploy = this.getDeployForId(idDeploy);
+        if (deploy == null) {
+            throw new RuntimeException("Deploy no encontrado con ID: " + idDeploy);
+        }
+        if (deploy instanceof Feature == false) {
+            throw new RuntimeException("El Deploy con ID: " + idDeploy + " no es de tipo Feature");
+        }
+
+        return (Feature) deploy;
+    }
+
     private Deploy buildDeploy(DeployCreateDTO deployCreateDTO, Proyecto proyecto){
 
         Deploy.DeployBuilder<?,?> deployBuilder;
@@ -150,16 +166,18 @@ public class DeployService {
     }
 
     public List<CambioResponseDTO> asignarCambios(Long idDeploy, List<CambioCreateDTO> cambios) {
-        // Lógica para asignar los cambios realizados al despliegue
 
-        Deploy deploy = this.getDeployForId(idDeploy);
-        if (deploy == null) {
-            throw new RuntimeException("Deploy no encontrado con ID: " + idDeploy);
-        }
-        if (deploy instanceof Feature == false) {
-            throw new RuntimeException("El Deploy con ID: " + idDeploy + " no es de tipo Feature");
-        }
+        var feature = this.getFeatureFromId(idDeploy);
 
-        return cambioService.crearCambios(cambios, (Feature)deploy);
+        return cambioService.crearCambios(cambios, feature);
     }
+
+    public List<NewFuncionalidadResponseDTO> asignarFuncionalidades(
+            Long idDeploy, 
+            List<NewFuncionalidadCreateDTO> funcionalidades) {
+        
+        var feature = this.getFeatureFromId(idDeploy);
+        return newFuncionalidadService.crearFuncionalidades(funcionalidades, feature);
+    }
+
 }
