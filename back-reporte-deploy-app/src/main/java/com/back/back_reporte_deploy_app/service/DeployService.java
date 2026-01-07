@@ -28,6 +28,8 @@ import com.back.back_reporte_deploy_app.entity.PlanRollback;
 import com.back.back_reporte_deploy_app.entity.Proyecto;
 import com.back.back_reporte_deploy_app.entity.Responsable;
 import com.back.back_reporte_deploy_app.entity.Validacion;
+import com.back.back_reporte_deploy_app.exceptions.BadRequestException;
+import com.back.back_reporte_deploy_app.exceptions.ResourceNotFoundException;
 import com.back.back_reporte_deploy_app.repository.DeployRepository;
 import com.back.back_reporte_deploy_app.repository.DetDeployRepository;
 
@@ -124,10 +126,10 @@ public class DeployService {
     private Feature getFeatureFromId(Long idDeploy){
         Deploy deploy = this.getDeployForId(idDeploy);
         if (deploy == null) {
-            throw new RuntimeException("Deploy no encontrado con ID: " + idDeploy);
+            throw new ResourceNotFoundException("Deploy no encontrado con ID: " + idDeploy);
         }
         if (deploy instanceof Feature == false) {
-            throw new RuntimeException("El Deploy con ID: " + idDeploy + " no es de tipo Feature");
+            throw new BadRequestException("El Deploy con ID: " + idDeploy + " no es de tipo Feature");
         }
 
         return (Feature) deploy;
@@ -157,10 +159,14 @@ public class DeployService {
     }
 
     public Deploy getDeployForId(Long idDeploy){
-        return deployRepository.findById(idDeploy).orElseThrow(() -> new RuntimeException("TipoDeploy no encontrado"));
+        return deployRepository.findById(idDeploy)
+            .orElseThrow(() -> new ResourceNotFoundException("TipoDeploy no encontrado"));
     }
 
     public List<ValidacionDeployResponseDTO> getValidaciones(Long idDeploy){
+
+        this.getDeployForId(idDeploy);
+
         return validacionService.getDetValidacionForDeploy(idDeploy)
             .stream().map(detValid -> ValidacionDeployResponseDTO
                 .builder()
