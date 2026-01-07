@@ -55,6 +55,7 @@ public class DeployService {
     private final ComponenteDeployService componenteDeployService;
     private final IncidenteService incidenteService;
     private final BugService bugService;
+    private final AreaService areaService;
 
 
     public DeployResponseDTO registerDeploy(DeployCreateDTO deployCreateDTO) {
@@ -104,7 +105,12 @@ public class DeployService {
 
             detDeployRepository.saveAll(detDeploys);
             ((Feature)newDeploy).setDetDeploys(detDeploys);
-            
+
+            var areaAfects = areaService.asignAreasAfectadasToFeature(
+                deployCreateDTO.getFeature().getAreasAfectadas(), ((Feature)newDeploy)
+            );
+            ((Feature)newDeploy).setAreasAfectadas(areaAfects);
+
         }
 
         List<Validacion> valids = validacionService.getValidacionForTipoDeploy(newDeploy.getTipo().getId());
@@ -218,7 +224,7 @@ public class DeployService {
     }
 
     public List<BugResponseDTO> agregarBugs(Long idDeploy, List<BugCreateDTO> bugs){
-        
+
         var patchDeploy = this.getPatchDeploy(idDeploy);
         return bugService.agregarBugs(bugs, patchDeploy);
     }
