@@ -1,7 +1,5 @@
 package com.back.back_reporte_deploy_app.dto;
 
-import java.util.List;
-
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -9,11 +7,11 @@ import lombok.NoArgsConstructor;
 
 @Data
 @Builder
-@NoArgsConstructor
 @AllArgsConstructor
-public class ProyectoResponseDTO {
-    
-    private Long id;
-    private String nombre;
-    private List<DeployResponseDTO> deploys;
+@NoArgsConstructor
+public class BugCreateDTO {
+    private String titulo;
+    private String descripcion;
+    private String impacto;
+    private String solucion;
 }

@@ -1,0 +1,7 @@
+package com.back.back_reporte_deploy_app.exceptions;
+
+public class ResourceNotFoundException extends RuntimeException {
+    public ResourceNotFoundException(String message) {
+        super(message);
+    }
+}

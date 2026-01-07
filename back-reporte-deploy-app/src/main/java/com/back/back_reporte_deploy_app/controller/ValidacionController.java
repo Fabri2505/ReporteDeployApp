@@ -29,16 +29,15 @@ public class ValidacionController {
     private final ValidacionService validacionService;
 
     @GetMapping("/tipo/{idTipoDeploy}")
-    public List<ValidacionResponseDTO> getValidacionesForTipo(@PathVariable Long idTipoDeploy) {
+    public ResponseEntity<List<ValidacionResponseDTO>> getValidacionesForTipo(@PathVariable Long idTipoDeploy) {
 
-        return validacionService.mapperValidacionesToResponse(
+        return ResponseEntity.ok(validacionService.mapperValidacionesToResponse(
             validacionService.getValidacionForTipoDeploy(idTipoDeploy)
-        );
+        ));
     }
 
     @PutMapping("detalle-deploy")
     public ResponseEntity<List<ValidacionDeployResponseDTO>> putDetalleDeploy(@RequestBody List<DetValidUpdateDTO> updateDetValid) {
-        //TODO: process PUT request
 
         List<ValidacionDeployResponseDTO> validsResponse = validacionService.updateDetValidForDeploy(updateDetValid);
 
