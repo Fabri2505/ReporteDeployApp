@@ -5,6 +5,8 @@ import java.util.List;
 
 import org.springframework.stereotype.Service;
 
+import com.back.back_reporte_deploy_app.dto.BugCreateDTO;
+import com.back.back_reporte_deploy_app.dto.BugResponseDTO;
 import com.back.back_reporte_deploy_app.dto.CambioCreateDTO;
 import com.back.back_reporte_deploy_app.dto.CambioResponseDTO;
 import com.back.back_reporte_deploy_app.dto.ComponenteDeployCreateDTO;
@@ -52,6 +54,7 @@ public class DeployService {
     private final NewFuncionalidadService newFuncionalidadService;
     private final ComponenteDeployService componenteDeployService;
     private final IncidenteService incidenteService;
+    private final BugService bugService;
 
 
     public DeployResponseDTO registerDeploy(DeployCreateDTO deployCreateDTO) {
@@ -135,6 +138,18 @@ public class DeployService {
         return (Feature) deploy;
     }
 
+    private Deploy getPatchDeploy(Long idDeploy){
+        Deploy deploy = this.getDeployForId(idDeploy);
+        if (deploy == null) {
+            throw new ResourceNotFoundException("Deploy no encontrado con ID: " + idDeploy);
+        }
+        if (deploy instanceof Feature == true) {
+            throw new BadRequestException("El Deploy con ID: " + idDeploy + " no es de tipo Patch");
+        }
+
+        return deploy;
+    }
+
     private Deploy buildDeploy(DeployCreateDTO deployCreateDTO, Proyecto proyecto){
 
         Deploy.DeployBuilder<?,?> deployBuilder;
@@ -200,6 +215,12 @@ public class DeployService {
         
         var feature = this.getFeatureFromId(idDeploy);
         return incidenteService.crearIncidentes(incidentes, feature);
+    }
+
+    public List<BugResponseDTO> agregarBugs(Long idDeploy, List<BugCreateDTO> bugs){
+        
+        var patchDeploy = this.getPatchDeploy(idDeploy);
+        return bugService.agregarBugs(bugs, patchDeploy);
     }
 
 }

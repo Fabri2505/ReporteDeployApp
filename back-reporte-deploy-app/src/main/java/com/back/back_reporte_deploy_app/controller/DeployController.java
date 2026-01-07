@@ -3,6 +3,8 @@ package com.back.back_reporte_deploy_app.controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.back.back_reporte_deploy_app.dto.BugCreateDTO;
+import com.back.back_reporte_deploy_app.dto.BugResponseDTO;
 import com.back.back_reporte_deploy_app.dto.CambioCreateDTO;
 import com.back.back_reporte_deploy_app.dto.CambioResponseDTO;
 import com.back.back_reporte_deploy_app.dto.ComponenteDeployCreateDTO;
@@ -67,7 +69,6 @@ public class DeployController {
         
         return ResponseEntity.status(HttpStatus.CREATED).body(response);
     }
-
     
     @PostMapping("/{idDeploy}/componentes")
     public ResponseEntity<List<ComponenteDeployResponseDTO>> asignarComponentesDesplegados(@PathVariable Long idDeploy, @RequestBody @Valid List<ComponenteDeployCreateDTO> componentes) {
@@ -83,6 +84,14 @@ public class DeployController {
         var response = deployService.asignarIncidentes(idDeploy, incidentes);
         
         return ResponseEntity.status(HttpStatus.CREATED).body(response);
+    }
+    
+    @PostMapping("/{idDeploy}/bugs")
+    public ResponseEntity<List<BugResponseDTO>> agregarBugs(@PathVariable Long idDeploy, @RequestBody List<BugCreateDTO> bugs) {
+        
+        var response = deployService.agregarBugs(idDeploy, bugs);
+
+        return ResponseEntity.status(HttpStatus.CREATED).body(response);    
     }
     
 }
