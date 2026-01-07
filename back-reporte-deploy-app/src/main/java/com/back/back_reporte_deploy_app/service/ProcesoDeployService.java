@@ -6,6 +6,7 @@ import org.springframework.stereotype.Service;
 
 import com.back.back_reporte_deploy_app.entity.PasoDeploy;
 import com.back.back_reporte_deploy_app.entity.ProcesoDeploy;
+import com.back.back_reporte_deploy_app.exceptions.ResourceNotFoundException;
 import com.back.back_reporte_deploy_app.repository.PasoDeployRepository;
 import com.back.back_reporte_deploy_app.repository.ProcesoDeployRepository;
 
@@ -19,7 +20,7 @@ public class ProcesoDeployService {
 
     public ProcesoDeploy getProcesoDeployById(Long idProcesoDeploy) {
         return procesoDeployRepository.findById(idProcesoDeploy)
-                .orElseThrow(() -> new RuntimeException("Proceso de Deploy no encontrado con ID: " + idProcesoDeploy));
+                .orElseThrow(() -> new ResourceNotFoundException("Proceso de Deploy no encontrado con ID: " + idProcesoDeploy));
     }
 
     public List<PasoDeploy> getPasosDeploysForIdProceDeploy(Long idProcesoDeploy) {

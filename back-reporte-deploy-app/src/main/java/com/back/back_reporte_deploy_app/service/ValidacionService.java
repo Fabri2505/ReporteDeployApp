@@ -11,6 +11,7 @@ import com.back.back_reporte_deploy_app.dto.ValidacionResponseDTO;
 import com.back.back_reporte_deploy_app.entity.Deploy;
 import com.back.back_reporte_deploy_app.entity.DetValidacion;
 import com.back.back_reporte_deploy_app.entity.Validacion;
+import com.back.back_reporte_deploy_app.exceptions.ResourceNotFoundException;
 import com.back.back_reporte_deploy_app.repository.DetValidacionRepository;
 import com.back.back_reporte_deploy_app.repository.ValidacionRepository;
 
@@ -60,7 +61,7 @@ public class ValidacionService {
 
     public DetValidacion getDetValidacion(Long idDetValid){
         return detValidacionRepository.findById(idDetValid)
-            .orElseThrow(() -> new RuntimeException("DetValidacion no encontrada"));
+            .orElseThrow(() -> new ResourceNotFoundException("DetValidacion no encontrada"));
     }
 
     public List<ValidacionDeployResponseDTO> updateDetValidForDeploy(List<DetValidUpdateDTO> updateDeploy){

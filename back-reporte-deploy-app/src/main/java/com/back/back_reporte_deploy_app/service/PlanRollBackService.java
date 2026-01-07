@@ -3,6 +3,7 @@ package com.back.back_reporte_deploy_app.service;
 import org.springframework.stereotype.Service;
 
 import com.back.back_reporte_deploy_app.entity.PlanRollback;
+import com.back.back_reporte_deploy_app.exceptions.ResourceNotFoundException;
 import com.back.back_reporte_deploy_app.repository.PlanRollBackRepository;
 
 import lombok.RequiredArgsConstructor;
@@ -14,6 +15,6 @@ public class PlanRollBackService {
 
     public PlanRollback getPlanRollbackById(Long idPlanRollback) {
         return planRollBackRepository.findById(idPlanRollback)
-                .orElseThrow(() -> new RuntimeException("Plan de Rollback no encontrado con ID: " + idPlanRollback));
+                .orElseThrow(() -> new ResourceNotFoundException("Plan de Rollback no encontrado con ID: " + idPlanRollback));
     }
 }

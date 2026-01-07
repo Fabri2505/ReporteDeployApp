@@ -160,7 +160,7 @@ public class DeployService {
 
     public Deploy getDeployForId(Long idDeploy){
         return deployRepository.findById(idDeploy)
-            .orElseThrow(() -> new ResourceNotFoundException("TipoDeploy no encontrado"));
+            .orElseThrow(() -> new ResourceNotFoundException("Despliegue no encontrado con ese codigo: " + idDeploy));
     }
 
     public List<ValidacionDeployResponseDTO> getValidaciones(Long idDeploy){

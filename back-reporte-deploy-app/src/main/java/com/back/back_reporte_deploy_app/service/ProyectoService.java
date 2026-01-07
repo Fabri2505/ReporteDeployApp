@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 import com.back.back_reporte_deploy_app.dto.ProyectoCreateDTO;
 import com.back.back_reporte_deploy_app.dto.ProyectoResponseDTO;
 import com.back.back_reporte_deploy_app.entity.Proyecto;
+import com.back.back_reporte_deploy_app.exceptions.ResourceNotFoundException;
 import com.back.back_reporte_deploy_app.repository.ProyectoRepository;
 
 import lombok.RequiredArgsConstructor;
@@ -41,7 +42,7 @@ public class ProyectoService {
     }
 
     public Proyecto getProyectoById(Long idProyecto) {
-        return proyectoRepository.findById(idProyecto).orElseThrow(() -> new RuntimeException("Proyecto no encontrado"));
+        return proyectoRepository.findById(idProyecto).orElseThrow(() -> new ResourceNotFoundException("Proyecto no encontrado"));
     }
 
 }
