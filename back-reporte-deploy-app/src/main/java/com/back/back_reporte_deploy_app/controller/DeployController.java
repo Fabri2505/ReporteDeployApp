@@ -46,6 +46,13 @@ public class DeployController {
         return ResponseEntity.status(HttpStatus.CREATED).body(deploy);
     }
 
+    @GetMapping("")
+    public ResponseEntity<List<DeployResponseDTO>> getDeploys() {
+        
+        return ResponseEntity.ok(deployService.getDeploys());
+    }
+    
+
     @GetMapping("/{idDeploy}/validacion")
     public ResponseEntity<List<ValidacionDeployResponseDTO>> getValidacionesForDeploy(@PathVariable Long idDeploy) {
 

@@ -57,6 +57,35 @@ public class DeployService {
     private final BugService bugService;
     private final AreaService areaService;
 
+    public List<DeployResponseDTO> getDeploys() {
+        List<Deploy> deploys = deployRepository.findAll();
+        List<DeployResponseDTO> deployResponseDTOs = new ArrayList<>();
+
+        for (Deploy deploy : deploys) {
+            List<ResponsablesDeployDTO> responsablesDTOs = deploy.getDetRespDeploys().stream()
+                    .map(detResp -> {
+                        Responsable responsable = detResp.getResponsable();
+                        return ResponsablesDeployDTO.builder()
+                                .id(responsable.getId())
+                                .nombre(responsable.getNom() + " " + responsable.getApe())
+                                .cargo(responsable.getCargo())
+                                .build();
+                    })
+                    .toList();
+
+            DeployResponseDTO deployDTO = DeployResponseDTO.builder()
+                    .id(deploy.getId())
+                    .version(deploy.getVersion())
+                    .fechaRegistro(deploy.getFecha().atTime(deploy.getHoraIni()))
+                    .tipoDeploy(deploy.getTipo().getNom())
+                    .responsables(responsablesDTOs)
+                    .build();
+
+            deployResponseDTOs.add(deployDTO);
+        }
+
+        return deployResponseDTOs;
+    }
 
     public DeployResponseDTO registerDeploy(DeployCreateDTO deployCreateDTO) {
 
