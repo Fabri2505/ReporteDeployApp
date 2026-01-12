@@ -1,5 +1,6 @@
 package com.back.back_reporte_deploy_app.entity;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import com.back.back_reporte_deploy_app.enums.NivelRiesgo;
@@ -12,6 +13,7 @@ import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToMany;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
@@ -37,23 +39,30 @@ public class Feature extends Deploy{
     private PlanRollback planRollback;
 
     @OneToMany(mappedBy = "feature")
-    private List<AreaAfectada> areasAfectadas;
+    @Builder.Default
+    private List<AreaAfectada> areasAfectadas = new ArrayList<>();
 
     @OneToMany(mappedBy = "feature")
-    private List<NewFuncionalidad> nuevasFuncionalidades;
+    @Builder.Default
+    private List<NewFuncionalidad> nuevasFuncionalidades = new ArrayList<>();
 
     @OneToMany(mappedBy = "feature")
-    private List<ComponenteDeploy> componentesDeploy;
+    @Builder.Default
+    private List<ComponenteDeploy> componentesDeploy = new ArrayList<>();
     
     @OneToMany(mappedBy = "feature")
-    private List<Notificacion> notificaciones;
+    @Builder.Default
+    private List<Notificacion> notificaciones = new ArrayList<>();
 
     @OneToMany(mappedBy = "feature")
-    private List<Incidente> incidentes;
+    @Builder.Default
+    private List<Incidente> incidentes = new ArrayList<>();
 
     @OneToMany(mappedBy = "feature")
-    private List<Cambio> cambios;
+    @Builder.Default
+    private List<Cambio> cambios = new ArrayList<>();
 
     @OneToMany(mappedBy = "feature")
-    private List<DetDeploy> detDeploys;
+    @Builder.Default
+    private List<DetDeploy> detDeploys = new ArrayList<>();
 }

@@ -1,5 +1,6 @@
 package com.back.back_reporte_deploy_app.entity;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import jakarta.persistence.Column;
@@ -33,8 +34,10 @@ public class Responsable {
     private String cargo;
 
     @OneToMany(mappedBy = "responsable")
-    private List<DetRespDeploy> detRespDeploys;
+    @Builder.Default
+    private List<DetRespDeploy> detRespDeploys = new ArrayList<>();
 
     @OneToMany(mappedBy = "responsable")
-    private List<Backup> backups;
+    @Builder.Default
+    private List<Backup> backups = new ArrayList<>();
 }

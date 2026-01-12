@@ -1,5 +1,6 @@
 package com.back.back_reporte_deploy_app.entity;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import jakarta.persistence.Entity;
@@ -25,8 +26,10 @@ public class PlanRollback {
     private String nom;
 
     @OneToMany(mappedBy = "planRollback")
-    private List<PasosRollBack> pasosRollBacks;
+    @Builder.Default
+    private List<PasosRollBack> pasosRollBacks = new ArrayList<>();
 
     @OneToMany(mappedBy = "planRollback")
-    private List<Feature> features;
+    @Builder.Default
+    private List<Feature> features = new ArrayList<>();
 }

@@ -78,6 +78,7 @@ public class DeployService {
                     .version(deploy.getVersion())
                     .fechaRegistro(deploy.getFecha().atTime(deploy.getHoraIni()))
                     .tipoDeploy(deploy.getTipo().getNom())
+                    .exitoso(deploy.getResultado())
                     .responsables(responsablesDTOs)
                     .build();
 
@@ -151,6 +152,7 @@ public class DeployService {
                 .id(newDeploy.getId())
                 .fechaRegistro(newDeploy.getFecha().atTime(newDeploy.getHoraIni()))
                 .tipoDeploy(newDeploy.getTipo().getNom())
+                .exitoso(newDeploy.getResultado())
                 .responsables(responsables.stream().map(responsable -> 
                     ResponsablesDeployDTO.builder()
                         .id(responsable.getId())

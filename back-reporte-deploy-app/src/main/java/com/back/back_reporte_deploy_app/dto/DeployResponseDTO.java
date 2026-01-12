@@ -17,5 +17,6 @@ public class DeployResponseDTO {
     private String version;
     private LocalDateTime fechaRegistro;
     private String tipoDeploy;
+    private Boolean exitoso;
     private List<ResponsablesDeployDTO> responsables;
 }

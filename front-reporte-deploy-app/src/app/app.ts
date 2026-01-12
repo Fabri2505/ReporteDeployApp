@@ -14,19 +14,14 @@ import { HlmButtonImports } from '@spartan-ng/helm/button';
 export class App implements OnInit{
   protected readonly title = signal('front-reporte-deploy-app');
 
-  darkMode = signal<boolean>(false);
+  darkMode = signal<boolean>(true);
 
   @HostBinding('class.dark') get isDarkMode() {
     return this.darkMode();
   }
 
   ngOnInit() {
-    // Detecta preferencia inicial
-    this.applyTheme();
-    
-    // Escucha cambios en preferencia del sistema
-    window.matchMedia('(prefers-color-scheme: dark)')
-      .addEventListener('change', () => this.applyTheme());
+    document.documentElement.classList.add('dark');
   }
 
   private applyTheme() {

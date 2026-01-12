@@ -1,5 +1,6 @@
 package com.back.back_reporte_deploy_app.entity;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import jakarta.persistence.Entity;
@@ -32,5 +33,6 @@ public class PasoDeploy {
     private ProcesoDeploy procesoDeploy;
 
     @OneToMany(mappedBy = "pasoDeploy")
-    private List<DetDeploy> detDeploys;
+    @Builder.Default
+    private List<DetDeploy> detDeploys = new ArrayList<>();
 }

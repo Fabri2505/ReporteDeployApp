@@ -1,6 +1,7 @@
 package com.back.back_reporte_deploy_app.entity;
 
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.List;
 
 import jakarta.persistence.Entity;
@@ -28,5 +29,6 @@ public class Proyecto {
     private LocalDateTime fechaCreacion;
 
     @OneToMany(mappedBy = "proyecto")
-    private List<Deploy> deploys;
+    @Builder.Default
+    private List<Deploy> deploys = new ArrayList<>();
 }

@@ -1,5 +1,6 @@
 package com.back.back_reporte_deploy_app.entity;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import jakarta.persistence.Entity;
@@ -25,5 +26,6 @@ public class Area {
     private String nombre;
 
     @OneToMany(mappedBy = "area")
-    private List<AreaAfectada> areasAfectadas;
+    @Builder.Default
+    private List<AreaAfectada> areasAfectadas = new ArrayList<>();;
 }

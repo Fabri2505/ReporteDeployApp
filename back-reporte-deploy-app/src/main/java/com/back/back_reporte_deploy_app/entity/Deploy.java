@@ -3,6 +3,7 @@ package com.back.back_reporte_deploy_app.entity;
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.List;
+import java.util.ArrayList;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -14,6 +15,7 @@ import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToMany;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.experimental.SuperBuilder;
@@ -49,15 +51,19 @@ public class Deploy {
     private Proyecto proyecto;
     
     @OneToMany(mappedBy = "deploy")
-    private List<Bug> bugs;
+    @Builder.Default
+    private List<Bug> bugs = new ArrayList<>();
 
     @OneToMany(mappedBy = "deploy")
-    private List<DetRespDeploy> detRespDeploys;
+    @Builder.Default
+    private List<DetRespDeploy> detRespDeploys = new ArrayList<>();
 
     @OneToMany(mappedBy = "deploy")
-    private List<DetValidacion> detValidaciones;
+    @Builder.Default
+    private List<DetValidacion> detValidaciones = new ArrayList<>();
 
     @OneToMany(mappedBy = "deploy")
-    private List<Backup> backups;
+    @Builder.Default
+    private List<Backup> backups = new ArrayList<>();
     
 }

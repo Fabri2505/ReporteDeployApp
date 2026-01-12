@@ -1,5 +1,6 @@
 package com.back.back_reporte_deploy_app.entity;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import com.back.back_reporte_deploy_app.enums.TipoValidacion;
@@ -34,9 +35,11 @@ public class Validacion {
     private TipoValidacion tipo;
 
     @OneToMany(mappedBy = "validacion")
-    private List<DetValidacion> detValidaciones;
+    @Builder.Default
+    private List<DetValidacion> detValidaciones = new ArrayList<>();
 
     @OneToMany(mappedBy = "validacion")
-    private List<DetValidacionTipoDeploy> detValidTipoDeploys;
+    @Builder.Default
+    private List<DetValidacionTipoDeploy> detValidTipoDeploys = new ArrayList<>();
     
 }
